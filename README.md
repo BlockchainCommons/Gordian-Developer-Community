@@ -11,7 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-Swift 4.2
+Swift 5.0
 
 ## Installation
 
@@ -25,7 +25,8 @@ pod 'AirgappedSigning'
 ## Author
 
 Wolf McNally, wolf@wolfmcnally.com
+Copyright © 2019 Blockchain Commons.
 
 ## License
 
-AirgappedSigning is available under the MIT license. See the LICENSE file for more info.
+AirgappedSigning is available under the Apache license. See the LICENSE file for more info.
