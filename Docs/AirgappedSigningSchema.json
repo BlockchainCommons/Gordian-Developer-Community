@@ -1,0 +1,326 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://blockchaincommons.org/schemas/AirgappedSigning.json",
+	"$comment": "This scheme follows the convention of naming keys with `Capitalized` words when they represent types, and `lowercased` words when they represent instances. In general, `camelCase` is used for identifiers.",
+	"definitions": {
+		"Name": {
+			"$comment": "A human-assigned name for an object. In required field lists herein, `name` is intentionally left optional.",
+			"type": "string",
+			"minLength": 1
+		},
+		"UID": {
+			"$comment": "A unique identifier used to associate messages or parts of documents.",
+			"type": "string",
+			"format": "uuid"
+		},
+		"Asset": {
+			"$comment": "Identifies a particular kind of asset, for example Bitcoin. Could also represent the type of any other document capable of being signed.\n`BTC`: Bitcoin, `BTCT`: Bitcoin Testnet.",
+			"type": "string",
+			"enum": ["BTC", "BTCT"]
+		},
+		"Fragments": {
+			"$comment": "A whole number count of the smallest unit of an asset; in the case of Bitcoin, the Satoshi.",
+			"type": "number",
+			"multipleOf": 1
+		},
+		"MultiPart": {
+			"$comment": "Used when a document is too large to fit into a packet (like a QR code) and must be broken into multiple parts. The `data` field contains a base64-encoded chunck of another document that conforms to this spec.",
+			"type": "object",
+			"properties": {
+				"uid": {
+					"$comment": "`uid` must be the same for every part of the same multipart document.",
+					"$ref": "#/definitions/UID"
+				},
+				"part": {
+					"type": "number",
+					"multipleOf": 1,
+					"minimum": 0,
+					"$comment": "Zero-based. Must be < `count`."
+				},
+				"count": {
+					"type": "number",
+					"multipleOf": 1,
+					"minimum": 1
+				},
+				"data": {
+					"type": "string",
+					"contentEncoding": "base64"
+				}
+			},
+			"required": [
+				"uid",
+				"part",
+				"count",
+				"data"
+			],
+			"additionalProperties": false
+		},
+		"RecoveryWords": {
+			"$comment": "A list of recovery words used for BIP39 or similar.",
+			"type": "object",
+			"properties": {
+				"name": { "$ref": "#/definitions/Name" },
+				"format": { "enum": ["BIP39"] },
+				"words": {
+					"type": "array",
+					"minItems": 1,
+					"maxItems": 100,
+					"items": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 30
+					}
+				}
+			},
+			"required": [
+				"format",
+				"words"
+			],
+			"additionalProperties": false
+		},
+		"PaymentAddress": {
+			"$comment": "A payment address.",
+			"type": "string",
+			"minLength": 1
+		},
+		"KnownReceiver": {
+			"$comment": "A payment address associated with a name and asset type.",
+			"type": "object",
+			"properties": {
+				"name": { "$ref": "#/definitions/Name" },
+				"asset": { "$ref": "#/definitions/Asset" },
+				"address": { "$ref": "#/definitions/PaymentAddress" }
+			},
+			"required": [
+				"asset",
+				"address"
+			],
+			"additionalProperties": false
+		},
+		"AccountIndex": {
+			"$comment": "The `account` part of a BIP44 derivation path.",
+			"type": "number",
+			"multipleOf": 1,
+			"minimum": 0
+		},
+		"AddressIndex": {
+			"$comment": "The `address_index` part of a BIP44 derivation path.",
+			"type": "number",
+			"multipleOf": 1,
+			"minimum": 0
+		},
+		"HDPublicKey": {
+			"$comment": "An HD public key that can be watched for activity on the network, and from which payment addresses can be derived.",
+			"type": "string",
+			"minLength": 1
+		},
+		"ECPublicKey": {
+			"$comment": "A public key that can be used as part of a transaction signing.",
+			"type": "string",
+			"contentEncoding": "base64"
+		},
+		"ECSignature": {
+			"$comment": "An EC signature.",
+			"type": "string",
+			"contentEncoding": "base64"
+		},
+		"Account": {
+			"$comment": "A particular account derived from a particular public key.",
+			"type": "object",
+			"properties": {
+				"name": { "$ref": "#/definitions/Name" },
+				"asset": { "$ref": "#/definitions/Asset" },
+				"hdPublicKey": { "$ref": "#/definitions/HDPublicKey" },
+				"index": { "$ref": "#/definitions/AccountIndex" }
+			},
+			"required": [
+				"asset",
+				"hdPublicKey",
+				"index"
+			],
+			"additionalProperties": false
+		},
+		"Derivation": {
+			"type": "object",
+			"properties": {
+				"accountIndex": { "$ref": "#/definitions/AccountIndex" },
+				"addressIndex": { "$ref": "#/definitions/AddressIndex" },
+			},
+			"required": [
+				"accountIndex",
+				"addressIndex"
+			],
+			"additionalProperties": false
+		},
+		"Input": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"$comment": "Associates this input with its signature(s).",
+					"$ref": "#/definitions/UID"
+				},
+				"txHash": { "type": "string" },
+				"inputIndex": { "type": "number" },
+				"sender": {
+					"$comment": "Which private key to use for signing can be determined by searching for the private key from which `sender` can be derived by applying `accountIndex` and `addressIndex` in the derivation path.",
+					"$ref": "#/definitions/PaymentAddress"
+				},
+				"derivation": { "$ref": "#/definitions/Derivation" },
+				"amount": { "$ref": "#/definitions/Fragments" }
+			},
+			"required": [
+				"uid",
+				"txHash",
+				"inputIndex",
+				"sender",
+				"derivation",
+				"amount"
+			],
+			"additionalProperties": false
+		},
+		"Output": {
+			"type": "object",
+			"properties": {
+				"uid": { "$ref": "#/definitions/UID" },
+				"receiver": { "$ref": "#/definitions/PaymentAddress" },
+				"amount": { "$ref": "#/definitions/Fragments" },
+				"derivation": { "$ref": "#/definitions/Derivation" }
+			},
+			"required": [
+				"uid",
+				"receiver",
+				"amount"
+			],
+			"$comment": "`derivation` intentionally left optional because only change outputs need a derivation path so they can be confirmed as spendable.",
+			"additionalProperties": false
+		},
+		"InputSignature": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"$comment": "Associates this signature with an input in the transaction.",
+					"$ref": "#/definitions/UID"
+				},
+				"ecPublicKey": {
+					"$comment": "The public key which corresponds to this signature.",
+					"$ref": "#/definitions/ECPublicKey"
+				},
+				"ecSignature": {
+					"$comment": "The signature as would be pushed to the stack from a scriptSig or witness.",
+					"$ref": "#/definitions/ECSignature"
+				}
+			},
+			"required": [
+				"uid",
+				"ecPublicKey",
+				"ecSignature"
+			]
+		},
+		"Transaction": {
+			"$comment": "Roughly equivalent to a Partially Signed Bitcoin Transaction (PSBT). Designed so multiple parties can provide inputs, outputs, and signatures to be combined later.",
+			"type": "object",
+			"properties": {
+				"uid": {
+					"$comment": "`uid` must be the same for all messages of the same signing transaction.",
+					"$ref": "#/definitions/UID"
+				},
+				"asset": { "$ref": "#/definitions/Asset" },
+				"inputs": {
+					"$comment": "If present, may not be empty.",
+					"type": "array",
+					"items": { "$ref": "#/definitions/Input" }
+				},
+				"outputs": {
+					"$comment": "If present, may not be empty.",
+					"type": "array",
+					"items": { "$ref": "#/definitions/Output" }
+				},
+				"inputSignatures": {
+					"$comment": "If present, may not be empty.",
+					"type": "array",
+					"items": { "$ref": "#/definitions/InputSignature" }
+				}
+			},
+			"required": [
+				"uid"
+			],
+			"$comment": "`asset`, `inputs`, `outputs`, and `inputSignatures` intentionally left optional for representing partial transactions.",
+			"additionalProperties": false
+		},
+		"Header": {
+			"type": "object",
+			"properties": {
+				"format": { "const": "AirgappedSigning" },
+				"version": { "const": 1 }
+			},
+			"required": [
+				"type",
+				"version"
+			],
+			"additionalProperties": false
+		}
+	},
+
+	"oneOf": [
+		{
+			"type": "object",
+			"properties": {
+				"header": { "$ref": "#/definitions/Header" },
+				"multiPart": { "$ref": "#/definitions/MultiPart" }
+			},
+			"required": [
+				"header",
+				"multiPart"
+			],
+			"additionalProperties": false
+		},
+		{
+			"type": "object",
+			"properties": {
+				"header": { "$ref": "#/definitions/Header" },
+				"recoveryWords": { "$ref": "#/definitions/RecoveryWords" }
+			},
+			"required": [
+				"header",
+				"recoveryWords"
+			],
+			"additionalProperties": false
+		},
+		{
+			"type": "object",
+			"properties": {
+				"header": { "$ref": "#/definitions/Header" },
+				"knownReceiver": { "$ref": "#/definitions/KnownReceiver" }
+			},
+			"required": [
+				"header",
+				"knownReceiver"
+			],
+			"additionalProperties": false
+		},
+		{
+			"type": "object",
+			"properties": {
+				"header": { "$ref": "#/definitions/Header" },
+				"account": { "$ref": "#/definitions/Account" }
+			},
+			"required": [
+				"header",
+				"account"
+			],
+			"additionalProperties": false
+		},
+		{
+			"type": "object",
+			"properties": {
+				"header": { "$ref": "#/definitions/Header" },
+				"transaction": { "$ref": "#/definitions/Transaction" }
+			},
+			"required": [
+				"header",
+				"transaction"
+			],
+			"additionalProperties": false
+		}
+	]
+}
