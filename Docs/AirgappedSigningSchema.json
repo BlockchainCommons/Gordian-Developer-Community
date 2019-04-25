@@ -254,7 +254,7 @@
 				"version": { "const": 1 }
 			},
 			"required": [
-				"type",
+				"format",
 				"version"
 			],
 			"additionalProperties": false
