@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AirgappedSigning'
-    s.version          = '0.1.0'
+    s.version          = '0.1.1'
     s.summary          = 'A protocol for transmission of messages between hot and cold cryptographic wallets.'
 
     # s.description      = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
     s.module_name = 'AirgappedSigning'
 
-    s.dependency 'Bitcoin'
+    # s.dependency 'Bitcoin'
     s.dependency 'WolfCore'
     # s.dependency 'NonEmpty'
 end
