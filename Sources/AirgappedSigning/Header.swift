@@ -21,10 +21,22 @@
 import Foundation
 
 public struct Header: Codable, Checked {
-    public var format: Format
-    public var version: Version
+    public let format: Format
+    public let version: Version
+
+    private init(format: Format, version: Version) throws {
+        self.format = format
+        self.version = version
+        try check()
+    }
+
+    init() {
+        try! self.init(format: .AirgappedSigning, version: .v1)
+    }
 
     public func check() throws {
+        try checkEqual(format, .AirgappedSigning, context: "Header.format")
+        try checkEqual(version, .v1, context: "Header.version")
     }
 
     public enum Format: String, Codable {
@@ -33,5 +45,12 @@ public struct Header: Codable, Checked {
 
     public enum Version: Int, Codable {
         case v1 = 1
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let format = try container.decode(Format.self, forKey: .format)
+        let version = try container.decode(Version.self, forKey: .version)
+        try self.init(format: format, version: version)
     }
 }

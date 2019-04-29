@@ -19,12 +19,23 @@
 //  limitations under the License.
 
 import Foundation
-import NonEmpty
 
 public struct RecoveryWords: Codable, Checked {
-    public var name: String?
-    public var format: Format
-    public var words: [String]
+    public let name: String?
+    public let format: Format
+    public let words: [String]
+
+    public init(name: String?, format: Format = .BIP39, words: [String]) throws {
+        self.name = name
+        self.format = format
+        self.words = words
+        try check()
+    }
+
+    public init(name: String?, format: Format = .BIP39, mnemonic: String) throws {
+        let words = mnemonic.split(separator: " ").map { String($0) }
+        try self.init(name: name, format: format, words: words)
+    }
 
     public func check() throws {
         try checkName(name, context: "RecoveryWords.name")
@@ -33,5 +44,17 @@ public struct RecoveryWords: Codable, Checked {
 
     public enum Format: String, Codable {
         case BIP39
+    }
+
+    public var mnemonic: String {
+        return words.joined(separator: " ")
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decodeIfPresent(String.self, forKey: .name)
+        format = try container.decode(Format.self, forKey: .format)
+        words = try container.decode([String].self, forKey: .words)
+        try check()
     }
 }

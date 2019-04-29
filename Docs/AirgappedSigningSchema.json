@@ -145,6 +145,7 @@
 			"properties": {
 				"accountIndex": { "$ref": "#/definitions/AccountIndex" },
 				"addressIndex": { "$ref": "#/definitions/AddressIndex" },
+				"isChange": { "type": "boolean" }
 			},
 			"required": [
 				"accountIndex",

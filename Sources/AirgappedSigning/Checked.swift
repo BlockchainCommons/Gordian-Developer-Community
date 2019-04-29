@@ -37,6 +37,12 @@ func checkAsset(_ asset: String, context: String) throws {
     }
 }
 
+func checkEqual<T: Equatable>(_ a: T, _ b: T, context: String) throws {
+    guard a == b else {
+        throw AirgappedSigningError("\(context): \(a) is not equal to \(b).")
+    }
+}
+
 func checkNotEmpty(_ string: String, context: String) throws {
     guard !string.isEmpty else {
         throw AirgappedSigningError("\(context): Must be non-empty.")

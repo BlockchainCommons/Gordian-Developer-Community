@@ -21,14 +21,31 @@
 import Foundation
 
 public struct MultiPart: Codable, Checked {
-    public var uid: UUID
-    public var part: Int
-    public var count: Int
-    public var data: Data
+    public let uid: UUID
+    public let part: Int
+    public let count: Int
+    public let data: Data
 
     public func check() throws {
         try checkNotNegative(part, context: "Multipart.part")
         try checkPositive(count, context: "Multipart.count")
         try checkNotEmpty(data, context: "Multipart.data")
+    }
+
+    public init(uid: UUID, part: Int, count: Int, data: Data) throws {
+        self.uid = uid
+        self.part = part
+        self.count = count
+        self.data = data
+        try check()
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        uid = try container.decode(UUID.self, forKey: .uid)
+        part = try container.decode(Int.self, forKey: .part)
+        count = try container.decode(Int.self, forKey: .count)
+        data = try container.decode(Data.self, forKey: .data)
+        try check()
     }
 }

@@ -24,5 +24,5 @@ Pod::Spec.new do |s|
 
     s.dependency 'Bitcoin'
     s.dependency 'WolfCore'
-    s.dependency 'NonEmpty'
+    # s.dependency 'NonEmpty'
 end

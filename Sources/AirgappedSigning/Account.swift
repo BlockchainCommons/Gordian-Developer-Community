@@ -21,15 +21,32 @@
 import Foundation
 
 public struct Account: Codable, Checked {
-    public var name: String?
-    public var asset: String
-    public var hdPublicKey: String
-    public var index: Int
+    public let name: String?
+    public let asset: String
+    public let hdPublicKey: String
+    public let index: Int
 
     public func check() throws {
         try checkName(name, context: "Account.name")
         try checkAsset(asset, context: "Account")
         try checkNotEmpty(hdPublicKey, context: "Account.hdPublicKey")
         try checkNotNegative(index, context: "Account.index")
+    }
+
+    public init(name: String?, asset: String, hdPublicKey: String, index: Int) throws {
+        self.name = name
+        self.asset = asset
+        self.hdPublicKey = hdPublicKey
+        self.index = index
+        try check()
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decodeIfPresent(String.self, forKey: .name)
+        asset = try container.decode(String.self, forKey: .asset)
+        hdPublicKey = try container.decode(String.self, forKey: .hdPublicKey)
+        index = try container.decode(Int.self, forKey: .index)
+        try check()
     }
 }
