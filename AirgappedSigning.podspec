@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
     s.name             = 'AirgappedSigning'
-    s.version          = '0.1.1'
+    s.version          = '0.1.2'
     s.summary          = 'A protocol for transmission of messages between hot and cold cryptographic wallets.'
 
     # s.description      = <<-DESC
     # TODO: Add long description of the pod here.
     # DESC
 
-    s.homepage         = 'https://github.com/wolfmcnally/AirgappedSigning'
+    s.homepage         = 'https://github.com/blockchaincommons/AirgappedSigning'
     s.license          = { :type => 'Apache', :file => 'LICENSE' }
     s.author           = { 'Wolf McNally' => 'wolf@wolfmcnally.com' }
     s.source           = { :git => 'https://github.com/blockchainCommons/AirgappedSigning.git', :tag => s.version.to_s }
