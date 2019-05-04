@@ -19,19 +19,21 @@
 //  limitations under the License.
 
 import Foundation
+import Bitcoin
+import WolfCore
 
 public struct KnownReceiver: Codable, Checked {
     public let name: String?
-    public let asset: String
-    public let address: String
+    public let asset: Asset
+    public let address: PaymentAddress
 
     public func check() throws {
         try checkName(name, context: "KnownReceiver.name")
         try checkAsset(asset, context: "KnownReceiver.asset")
-        try checkNotEmpty(address, context: "KnownReceiver.address")
+        try checkNotEmpty(address®, context: "KnownReceiver.address")
     }
 
-    public init(name: String?, asset: String, address: String) throws {
+    public init(name: String?, asset: Asset, address: PaymentAddress) throws {
         self.name = name
         self.asset = asset
         self.address = address
@@ -41,8 +43,8 @@ public struct KnownReceiver: Codable, Checked {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decodeIfPresent(String.self, forKey: .name)
-        asset = try container.decode(String.self, forKey: .asset)
-        address = try container.decode(String.self, forKey: .address)
+        asset = try container.decode(Asset.self, forKey: .asset)
+        address = try container.decode(PaymentAddress.self, forKey: .address)
         try check()
     }
 }

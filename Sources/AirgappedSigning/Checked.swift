@@ -19,6 +19,7 @@
 //  limitations under the License.
 
 import Foundation
+import Bitcoin
 
 public protocol Checked {
     /// Performs second-level validation and throws if it fails.
@@ -31,8 +32,8 @@ func checkName(_ name: String?, context: String) throws {
     }
 }
 
-func checkAsset(_ asset: String, context: String) throws {
-    guard ["BTC", "BTCT"].contains(asset) else {
+func checkAsset(_ asset: Asset, context: String) throws {
+    guard ["BTC", "BTCT"].contains(asset.symbol) else {
         throw AirgappedSigningError("\(context): Unsupported asset: \(asset).")
     }
 }

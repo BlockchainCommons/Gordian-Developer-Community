@@ -19,13 +19,24 @@
 //  limitations under the License.
 
 import Foundation
+import Bitcoin
+import WolfCore
 
 public struct Transaction: Codable, Checked {
     public let uid: UUID
-    public let asset: String?
+    public let asset: Asset?
     public let inputs: [Input]?
     public let outputs: [Output]?
     public let inputSignatures: [InputSignature]?
+
+    public init(uid: UUID, asset: Asset? = nil, inputs: [Input]? = nil, outputs: [Output]? = nil, inputSignatures: [InputSignature]? = nil) throws {
+        self.uid = uid
+        self.asset = asset
+        self.inputs = inputs
+        self.outputs = outputs
+        self.inputSignatures = inputSignatures
+        try check()
+    }
 
     public func check() throws {
         if let asset = asset {
@@ -87,19 +98,19 @@ public struct Transaction: Codable, Checked {
         public let uid: UUID
         public let txHash: String
         public let inputIndex: Int
-        public let sender: String
+        public let sender: PaymentAddress
         public let derivation: Derivation
-        public let amount: UInt64
+        public let amount: Fragments
 
         public func check() throws {
             try checkNotEmpty(txHash, context: "Input.txHash")
             try checkNotNegative(inputIndex, context: "Input.inputIndex")
-            try checkNotEmpty(sender, context: "Input.sender")
+            try checkNotEmpty(sender®, context: "Input.sender")
             try derivation.check()
-            try checkPositive(amount, context: "Input.amount")
+            try checkPositive(amount®, context: "Input.amount")
         }
 
-        public init(uid: UUID, txHash: String, inputIndex: Int, sender: String, derivation: Derivation, amount: UInt64) throws {
+        public init(uid: UUID, txHash: String, inputIndex: Int, sender: PaymentAddress, derivation: Derivation, amount: Fragments) throws {
             self.uid = uid
             self.txHash = txHash
             self.inputIndex = inputIndex
@@ -114,25 +125,25 @@ public struct Transaction: Codable, Checked {
             uid = try container.decode(UUID.self, forKey: .uid)
             txHash = try container.decode(String.self, forKey: .txHash)
             inputIndex = try container.decode(Int.self, forKey: .inputIndex)
-            sender = try container.decode(String.self, forKey: .sender)
+            sender = try container.decode(PaymentAddress.self, forKey: .sender)
             derivation = try container.decode(Derivation.self, forKey: .derivation)
-            amount = try container.decode(UInt64.self, forKey: .amount)
+            amount = try container.decode(Fragments.self, forKey: .amount)
             try check()
         }
     }
 
     public struct Output: Codable, Checked {
         public let uid: UUID
-        public let receiver: String
-        public let amount: UInt64
+        public let receiver: PaymentAddress
+        public let amount: Fragments
         public let derivation: Derivation?
 
         public func check() throws {
-            try checkNotEmpty(receiver, context: "Output.receiver")
-            try checkPositive(amount, context: "Output.amount")
+            try checkNotEmpty(receiver®, context: "Output.receiver")
+            try checkPositive(amount®, context: "Output.amount")
         }
 
-        public init(uid: UUID, receiver: String, amount: UInt64, derivation: Derivation?) throws {
+        public init(uid: UUID, receiver: PaymentAddress, amount: Fragments, derivation: Derivation?) throws {
             self.uid = uid
             self.receiver = receiver
             self.amount = amount
@@ -143,8 +154,8 @@ public struct Transaction: Codable, Checked {
         public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             uid = try container.decode(UUID.self, forKey: .uid)
-            receiver = try container.decode(String.self, forKey: .receiver)
-            amount = try container.decode(UInt64.self, forKey: .amount)
+            receiver = try container.decode(PaymentAddress.self, forKey: .receiver)
+            amount = try container.decode(Fragments.self, forKey: .amount)
             derivation = try container.decodeIfPresent(Derivation.self, forKey: .derivation)
             try check()
         }
@@ -152,15 +163,15 @@ public struct Transaction: Codable, Checked {
 
     public struct InputSignature: Codable, Checked {
         public let uid: UUID
-        public let ecPublicKey: Data
+        public let ecPublicKey: ECKey
         public let ecSignature: Data
 
         public func check() throws {
-            try checkNotEmpty(ecPublicKey, context: "InputSignature.ecPublicKey")
+            try checkNotEmpty(ecPublicKey®, context: "InputSignature.ecPublicKey")
             try checkNotEmpty(ecSignature, context: "InputSignature.ecSignature")
         }
 
-        public init(uid: UUID, ecPublicKey: Data, ecSignature: Data) throws {
+        public init(uid: UUID, ecPublicKey: ECKey, ecSignature: Data) throws {
             self.uid = uid
             self.ecPublicKey = ecPublicKey
             self.ecSignature = ecSignature
@@ -170,7 +181,7 @@ public struct Transaction: Codable, Checked {
         public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             uid = try container.decode(UUID.self, forKey: .uid)
-            ecPublicKey = try container.decode(Data.self, forKey: .ecPublicKey)
+            ecPublicKey = try container.decode(ECKey.self, forKey: .ecPublicKey)
             ecSignature = try container.decode(Data.self, forKey: .ecSignature)
             try check()
         }

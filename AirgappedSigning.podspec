@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
 
     s.module_name = 'AirgappedSigning'
 
-    # s.dependency 'Bitcoin'
+    s.dependency 'Bitcoin'
     s.dependency 'WolfCore'
-    # s.dependency 'NonEmpty'
 end

@@ -19,6 +19,8 @@
 //  limitations under the License.
 
 import Foundation
+import Bitcoin
+import WolfCore
 
 public struct RecoveryWords: Codable, Checked {
     public let name: String?
@@ -32,8 +34,8 @@ public struct RecoveryWords: Codable, Checked {
         try check()
     }
 
-    public init(name: String?, format: Format = .BIP39, mnemonic: String) throws {
-        let words = mnemonic.split(separator: " ").map { String($0) }
+    public init(name: String?, format: Format = .BIP39, mnemonic: Mnemonic) throws {
+        let words = mnemonic®.split(separator: " ").map { String($0) }
         try self.init(name: name, format: format, words: words)
     }
 
@@ -46,8 +48,8 @@ public struct RecoveryWords: Codable, Checked {
         case BIP39
     }
 
-    public var mnemonic: String {
-        return words.joined(separator: " ")
+    public var mnemonic: Mnemonic {
+        return words.joined(separator: " ") |> tagMnemonic
     }
 
     public init(from decoder: Decoder) throws {
