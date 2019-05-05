@@ -25,11 +25,11 @@ import WolfCore
 public struct Transaction: Codable, Checked {
     public let uid: UUID
     public let asset: Asset?
-    public let inputs: [Input]?
-    public let outputs: [Output]?
-    public let inputSignatures: [InputSignature]?
+    public let inputs: [Input]
+    public let outputs: [Output]
+    public let inputSignatures: [InputSignature]
 
-    public init(uid: UUID, asset: Asset? = nil, inputs: [Input]? = nil, outputs: [Output]? = nil, inputSignatures: [InputSignature]? = nil) throws {
+    public init(uid: UUID, asset: Asset? = nil, inputs: [Input] = [], outputs: [Output] = [], inputSignatures: [InputSignature] = []) throws {
         self.uid = uid
         self.asset = asset
         self.inputs = inputs
@@ -38,18 +38,41 @@ public struct Transaction: Codable, Checked {
         try check()
     }
 
+    private enum CodingKeys: String, CodingKey {
+        case uid
+        case asset
+        case inputs
+        case outputs
+        case inputSignatures
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        uid = try container.decode(UUID.self, forKey: .uid)
+        asset = try container.decodeIfPresent(Asset.self, forKey: .asset)
+        inputs = try container.decodeIfPresent([Input].self, forKey: .inputs) ?? []
+        outputs = try container.decodeIfPresent([Output].self, forKey: .outputs) ?? []
+        inputSignatures = try container.decodeIfPresent([InputSignature].self, forKey: .inputSignatures) ?? []
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(uid, forKey: .uid)
+        try container.encodeIfPresent(asset, forKey: .asset)
+        if !inputs.isEmpty {
+            try container.encode(inputs, forKey: .inputs)
+        }
+        if !outputs.isEmpty {
+            try container.encode(outputs, forKey: .outputs)
+        }
+        if !inputSignatures.isEmpty {
+            try container.encode(inputSignatures, forKey: .inputSignatures)
+        }
+    }
+
     public func check() throws {
         if let asset = asset {
             try checkAsset(asset, context: "Transaction")
-        }
-        if let inputs = inputs {
-            try checkNotEmpty(inputs, context: "Transaction.inputs")
-        }
-        if let outputs = outputs {
-            try checkNotEmpty(outputs, context: "Transaction.outputs")
-        }
-        if let inputSignatures = inputSignatures {
-            try checkNotEmpty(inputSignatures, context: "Transaction.inputSignatures")
         }
     }
 
@@ -164,14 +187,14 @@ public struct Transaction: Codable, Checked {
     public struct InputSignature: Codable, Checked {
         public let uid: UUID
         public let ecPublicKey: ECKey
-        public let ecSignature: Data
+        public let ecSignature: Endorsement
 
         public func check() throws {
             try checkNotEmpty(ecPublicKey®, context: "InputSignature.ecPublicKey")
-            try checkNotEmpty(ecSignature, context: "InputSignature.ecSignature")
+            try checkNotEmpty(ecSignature®, context: "InputSignature.ecSignature")
         }
 
-        public init(uid: UUID, ecPublicKey: ECKey, ecSignature: Data) throws {
+        public init(uid: UUID, ecPublicKey: ECKey, ecSignature: Endorsement) throws {
             self.uid = uid
             self.ecPublicKey = ecPublicKey
             self.ecSignature = ecSignature
@@ -182,7 +205,7 @@ public struct Transaction: Codable, Checked {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             uid = try container.decode(UUID.self, forKey: .uid)
             ecPublicKey = try container.decode(ECKey.self, forKey: .ecPublicKey)
-            ecSignature = try container.decode(Data.self, forKey: .ecSignature)
+            ecSignature = try container.decode(Endorsement.self, forKey: .ecSignature)
             try check()
         }
     }

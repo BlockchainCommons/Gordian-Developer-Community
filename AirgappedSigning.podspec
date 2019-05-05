@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AirgappedSigning'
-    s.version          = '0.1.2'
+    s.version          = '0.2.0'
     s.summary          = 'A protocol for transmission of messages between hot and cold cryptographic wallets.'
 
     # s.description      = <<-DESC
