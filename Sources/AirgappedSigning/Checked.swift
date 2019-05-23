@@ -38,6 +38,12 @@ func checkAsset(_ asset: Asset, context: String) throws {
     }
 }
 
+func checkAccountFormat(_ format: AccountFormat, context: String) throws {
+    guard ["BIP44"].contains(format.rawValue) else {
+        throw AirgappedSigningError("\(context): Unsupported account format: \(format).")
+    }
+}
+
 func checkEqual<T: Equatable>(_ a: T, _ b: T, context: String) throws {
     guard a == b else {
         throw AirgappedSigningError("\(context): \(a) is not equal to \(b).")

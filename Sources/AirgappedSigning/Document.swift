@@ -29,6 +29,7 @@ public struct Document: Codable {
         case recoveryWords(RecoveryWords)
         case knownReceiver(KnownReceiver)
         case account(Account)
+        case accountRequest(AccountRequest)
         case transaction(Transaction)
     }
 
@@ -43,6 +44,7 @@ public struct Document: Codable {
         case recoveryWords
         case knownReceiver
         case account
+        case accountRequest
         case transaction
         case missing
     }
@@ -58,6 +60,8 @@ public struct Document: Codable {
             body = .knownReceiver(knownReceiver)
         } else if let account = try container.decodeIfPresent(Account.self, forKey: .account) {
             body = .account(account)
+        } else if let accountRequest = try container.decodeIfPresent(AccountRequest.self, forKey: .accountRequest) {
+            body = .accountRequest(accountRequest)
         } else if let transaction = try container.decodeIfPresent(Transaction.self, forKey: .transaction) {
             body = .transaction(transaction)
         } else {
@@ -77,6 +81,8 @@ public struct Document: Codable {
             try container.encode(value, forKey: .knownReceiver)
         case .account(let value):
             try container.encode(value, forKey: .account)
+        case .accountRequest(let value):
+            try container.encode(value, forKey: .accountRequest)
         case .transaction(let value):
             try container.encode(value, forKey: .transaction)
         }
@@ -109,6 +115,13 @@ public func getAccount(_ document: Document) throws -> Account {
         throw AirgappedSigningError("Expected Account.")
     }
     return account
+}
+
+public func getAccountRequest(_ document: Document) throws -> AccountRequest {
+    guard case let .accountRequest(accountRequest) = document.body else {
+        throw AirgappedSigningError("Expected AccountRequest.")
+    }
+    return accountRequest
 }
 
 public func getTransaction(_ document: Document) throws -> Transaction {

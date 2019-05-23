@@ -72,15 +72,34 @@ Used to send a public key, asset, and associated account path to the hot wallet 
 	"account": {
 		"name": "Example Account",
 		"asset": "BTC",
+		"format": "BIP44",
 		"hdPublicKey": "xpub6CUGRUonZSQ4TWtTMmzXdrXDtypWKiKrhko4egpiMZbpiaQL2jkwSB1icqYh2cfDfVxdx4df189oLKnC5fSwqPfgyP3hooxujYzAu3fDVmz",
 		"index": 1
 	}
 }
 ```
 
+#### Account Request
+
+Used to request a new account to be assigned, and the account public key returned. The reply to this message is an Account document.
+
+```json
+{
+	"header": {
+		"format": "AirgappedSigning",
+		"version": 1
+	},
+	"accountRequest": {
+		"name": "New Account",
+		"asset": "BTC",
+		"format": "BIP44"
+	}
+}
+```
+
 #### Transaction Signing Request
 
-"Transaction" as used here is rougly equivalent to a Partially Signed Bitcoin Transaction (PSBT). It is designed so multiple parties can provide inputs, outputs, and signatures to be combined later.
+"Transaction" as used here is roughly equivalent to a Partially Signed Bitcoin Transaction (PSBT). It is designed so multiple parties can provide inputs, outputs, and signatures to be combined later.
 
 ```json
 {

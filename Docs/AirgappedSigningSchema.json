@@ -124,19 +124,40 @@
 			"type": "string",
 			"contentEncoding": "base64"
 		},
+		"AccountFormat": {
+			"$comment": "The method for deriving an account.",
+			"type": "string",
+			"enum": ["BIP44"]
+		},
 		"Account": {
 			"$comment": "A particular account derived from a particular public key.",
 			"type": "object",
 			"properties": {
 				"name": { "$ref": "#/definitions/Name" },
 				"asset": { "$ref": "#/definitions/Asset" },
+				"format": { "$ref": "#/definitions/AccountFormat" },
 				"hdPublicKey": { "$ref": "#/definitions/HDPublicKey" },
 				"index": { "$ref": "#/definitions/AccountIndex" }
 			},
 			"required": [
 				"asset",
+				"format",
 				"hdPublicKey",
 				"index"
+			],
+			"additionalProperties": false
+		},
+		"AccountRequest": {
+			"$comment": "A request for a new account to be assigned, and the account public key returned.",
+			"type": "object",
+			"properties": {
+				"name": { "$ref": "#/definitions/Name" },
+				"asset": { "$ref": "#/definitions/Asset" },
+				"format": { "$ref": "#/definitions/AccountFormat" }
+			},
+			"required": [
+				"asset",
+				"format"
 			],
 			"additionalProperties": false
 		},
@@ -245,7 +266,7 @@
 			"required": [
 				"uid"
 			],
-			"$comment": "`asset`, `inputs`, `outputs`, and `inputSignatures` intentionally left optional for representing partial transactions.",
+			"$comment2": "`asset`, `inputs`, `outputs`, and `inputSignatures` intentionally left optional for representing partial transactions.",
 			"additionalProperties": false
 		},
 		"Header": {
@@ -308,6 +329,18 @@
 			"required": [
 				"header",
 				"account"
+			],
+			"additionalProperties": false
+		},
+		{
+			"type": "object",
+			"properties": {
+				"header": { "$ref": "#/definitions/Header" },
+				"accountRequest": { "$ref": "#/definitions/AccountRequest" }
+			},
+			"required": [
+				"header",
+				"accountRequest"
 			],
 			"additionalProperties": false
 		},

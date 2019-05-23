@@ -2,7 +2,7 @@
 //  Account.swift
 //  AirgappedSigning_Example
 //
-//  Created by Wolf McNally on 4/23/19.
+//  Created by Wolf McNally on 5/22/19.
 //
 //  Copyright © 2019 Blockchain Commons.
 //
@@ -22,24 +22,21 @@ import Foundation
 import Bitcoin
 import WolfCore
 
-public struct Account: Codable, Checked {
+public struct AccountRequest: Codable, Checked {
     public let name: String?
     public let asset: Asset
-    public let hdPublicKey: HDKey
-    public let index: Int
+    public let format: AccountFormat
 
     public func check() throws {
-        try checkName(name, context: "Account.name")
-        try checkAsset(asset, context: "Account.asset")
-        try checkNotEmpty(hdPublicKey®, context: "Account.hdPublicKey")
-        try checkNotNegative(index, context: "Account.index")
+        try checkName(name, context: "AccountRequest.name")
+        try checkAsset(asset, context: "AccountRequest.asset")
+        try checkAccountFormat(format, context: "AccountRequest.format")
     }
 
-    public init(name: String?, asset: Asset, hdPublicKey: HDKey, index: Int) throws {
+    public init(name: String?, asset: Asset, format: AccountFormat) throws {
         self.name = name
         self.asset = asset
-        self.hdPublicKey = hdPublicKey
-        self.index = index
+        self.format = format
         try check()
     }
 
@@ -47,8 +44,7 @@ public struct Account: Codable, Checked {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decodeIfPresent(String.self, forKey: .name)
         asset = try container.decode(Asset.self, forKey: .asset)
-        hdPublicKey = try container.decode(HDKey.self, forKey: .hdPublicKey)
-        index = try container.decode(Int.self, forKey: .index)
+        format = try container.decode(AccountFormat.self, forKey: .format)
         try check()
     }
 }
