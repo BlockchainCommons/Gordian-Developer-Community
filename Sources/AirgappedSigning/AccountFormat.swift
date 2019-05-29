@@ -20,6 +20,6 @@
 
 import Foundation
 
-public enum AccountFormat: String, Codable {
+public enum AccountFormat: String, Codable, CaseIterable {
     case bip44 = "BIP44"
 }
