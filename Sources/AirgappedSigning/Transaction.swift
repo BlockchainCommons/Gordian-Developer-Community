@@ -1,6 +1,6 @@
 //
 //  Transaction.swift
-//  AirgappedSigning_Example
+//  AirgappedSigning
 //
 //  Created by Wolf McNally on 4/23/19.
 //
