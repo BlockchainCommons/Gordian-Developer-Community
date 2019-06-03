@@ -25,19 +25,22 @@ import WolfCore
 public struct Account: Codable, Checked {
     public let name: String?
     public let asset: Asset
+    public let format: AccountFormat
     public let hdPublicKey: HDKey
     public let index: Int
 
     public func check() throws {
         try checkName(name, context: "Account.name")
         try checkAsset(asset, context: "Account.asset")
+        try checkAccountFormat(format, context: "Account.format")
         try checkNotEmpty(hdPublicKey®, context: "Account.hdPublicKey")
         try checkNotNegative(index, context: "Account.index")
     }
 
-    public init(name: String?, asset: Asset, hdPublicKey: HDKey, index: Int) throws {
+    public init(name: String?, asset: Asset, format: AccountFormat, hdPublicKey: HDKey, index: Int) throws {
         self.name = name
         self.asset = asset
+        self.format = format
         self.hdPublicKey = hdPublicKey
         self.index = index
         try check()
@@ -47,6 +50,7 @@ public struct Account: Codable, Checked {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decodeIfPresent(String.self, forKey: .name)
         asset = try container.decode(Asset.self, forKey: .asset)
+        format = try container.decode(AccountFormat.self, forKey: .format)
         hdPublicKey = try container.decode(HDKey.self, forKey: .hdPublicKey)
         index = try container.decode(Int.self, forKey: .index)
         try check()
