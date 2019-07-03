@@ -120,23 +120,23 @@ public struct Transaction: Codable, Checked {
     public struct Input: Codable, Checked {
         public let uid: UUID
         public let txHash: String
-        public let inputIndex: Int
+        public let index: Int
         public let sender: PaymentAddress
         public let derivation: Derivation
         public let amount: Fragments
 
         public func check() throws {
             try checkNotEmpty(txHash, context: "Input.txHash")
-            try checkNotNegative(inputIndex, context: "Input.inputIndex")
+            try checkNotNegative(index, context: "Input.index")
             try checkNotEmpty(sender®, context: "Input.sender")
             try derivation.check()
             try checkPositive(amount®, context: "Input.amount")
         }
 
-        public init(uid: UUID, txHash: String, inputIndex: Int, sender: PaymentAddress, derivation: Derivation, amount: Fragments) throws {
+        public init(uid: UUID, txHash: String, index: Int, sender: PaymentAddress, derivation: Derivation, amount: Fragments) throws {
             self.uid = uid
             self.txHash = txHash
-            self.inputIndex = inputIndex
+            self.index = index
             self.sender = sender
             self.derivation = derivation
             self.amount = amount
@@ -147,7 +147,7 @@ public struct Transaction: Codable, Checked {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             uid = try container.decode(UUID.self, forKey: .uid)
             txHash = try container.decode(String.self, forKey: .txHash)
-            inputIndex = try container.decode(Int.self, forKey: .inputIndex)
+            index = try container.decode(Int.self, forKey: .index)
             sender = try container.decode(PaymentAddress.self, forKey: .sender)
             derivation = try container.decode(Derivation.self, forKey: .derivation)
             amount = try container.decode(Fragments.self, forKey: .amount)

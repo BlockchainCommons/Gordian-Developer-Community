@@ -47,10 +47,32 @@ public struct Document: Codable {
         case accountRequest
         case transaction
         case missing
+        case extra
+    }
+
+    public func check() throws {
+        try header.check()
+        switch body {
+        case .multiPart(let doc):
+            try doc.check()
+        case .recoveryWords(let doc):
+            try doc.check()
+        case .knownReceiver(let doc):
+            try doc.check()
+        case .account(let doc):
+            try doc.check()
+        case .accountRequest(let doc):
+            try doc.check()
+        case .transaction(let doc):
+            try doc.check()
+        }
     }
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        if container.allKeys.count > 2 {
+            throw DecodingError.dataCorruptedError(forKey: .extra, in: container, debugDescription: "Too many keys in document.")
+        }
         header = try container.decode(Header.self, forKey: .header)
         if let multiPart = try container.decodeIfPresent(MultiPart.self, forKey: .multiPart) {
             body = .multiPart(multiPart)

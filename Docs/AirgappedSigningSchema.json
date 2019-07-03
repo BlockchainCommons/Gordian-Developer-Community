@@ -182,7 +182,7 @@
 					"$ref": "#/definitions/UID"
 				},
 				"txHash": { "type": "string" },
-				"inputIndex": { "type": "number" },
+				"index": { "type": "number" },
 				"sender": {
 					"$comment": "Which private key to use for signing can be determined by searching for the private key from which `sender` can be derived by applying `accountIndex` and `addressIndex` in the derivation path.",
 					"$ref": "#/definitions/PaymentAddress"
@@ -193,7 +193,7 @@
 			"required": [
 				"uid",
 				"txHash",
-				"inputIndex",
+				"index",
 				"sender",
 				"derivation",
 				"amount"

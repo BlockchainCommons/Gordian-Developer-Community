@@ -1,6 +1,11 @@
 PODS:
-  - AirgappedSigning (0.1.1):
+  - AirgappedSigning (0.4.0):
+    - Bitcoin
     - WolfCore
+  - Bitcoin (0.7.0):
+    - CBitcoin
+    - WolfCore
+  - CBitcoin (0.5.1)
   - ExtensibleEnumeratedName (2.0)
   - WolfConcurrency (3.0.2):
     - WolfFoundation
@@ -15,7 +20,7 @@ PODS:
     - WolfPipe
     - WolfStrings
     - WolfWith
-  - WolfFoundation (3.0.3):
+  - WolfFoundation (4.0.0):
     - WolfNumerics
     - WolfPipe
   - WolfNesting (2.0.1)
@@ -35,6 +40,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bitcoin
+    - CBitcoin
     - ExtensibleEnumeratedName
     - WolfConcurrency
     - WolfCore
@@ -51,11 +58,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AirgappedSigning: b7afce2640faa4aeb473a84290dcd2ff56620bcb
+  AirgappedSigning: b08ea9d312fd74925299bb26713e88da0e6b5c07
+  Bitcoin: d0d9403130c1bc2f7650f0d747a1107d443e92fc
+  CBitcoin: 3f0f2e4e211aa10573940d8d9c9b0b0123ad24b5
   ExtensibleEnumeratedName: 50f2d256f6d56baecf681f6fbb6362343dcf885b
   WolfConcurrency: 50458b6d801209f89e41d4bb9d57c80c65984770
   WolfCore: aaa510f76683e9f038e878d11356836eb135fd52
-  WolfFoundation: c38312563289428f5f0396df9af43bc81918bc53
+  WolfFoundation: f1e84c849c97aa17031a8917db99b82b428dbc03
   WolfNesting: 891247e766da604f0e8124d85a158fe123ceb8d8
   WolfNumerics: 6a57756b668073414da8a6911b86781096aded37
   WolfOSBridge: e9260681790a7c89f725e134c0c1d4172d2d2dc9
@@ -65,4 +74,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cdec0639a121f10bcbb4c9ad550349d37a0d14c9
 
-COCOAPODS: 1.7.0.beta.2
+COCOAPODS: 1.7.1

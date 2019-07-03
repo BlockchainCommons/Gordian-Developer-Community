@@ -114,7 +114,7 @@ Used to request a new account to be assigned, and the account public key returne
 			{
 				"uid": "A6B0DF6D-E670-4233-8EAC-626C0A9AAC9A",
 				"txHash": "ba34fa2ed2c42e7ba66887a96d22e14dec1244a3c47b271cd69a679afbaab868",
-				"inputIndex": 1,
+				"index": 1,
 				"sender": "18f8tN4PLdCXF2JHy5PjRerqXg994yGme3",
 				"derivation": {
 					"accountIndex": 0,

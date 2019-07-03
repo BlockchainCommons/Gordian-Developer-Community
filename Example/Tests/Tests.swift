@@ -24,10 +24,11 @@ class Tests: XCTestCase {
     func testThrowsOnNoHeader() {
         let json = """
         {
-            "recoveryWords": {
-                "name": "Rainy Day",
-                "format": "BIP39",
-                "words": ["panda", "diary", "marriage", "suffer", "basic", "glare", "surge", "auto", "scissors", "describe", "sell", "unique"]
+            "multiPart": {
+                "uid": "449C40FE-E207-4AC9-B552-51B007B68D50",
+                "part": 0,
+                "count": 1,
+                "data": "VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4K"
             }
         }
         """
@@ -41,15 +42,16 @@ class Tests: XCTestCase {
                 "format": "AirgappedSigning",
                 "version": 1
             },
+            "multiPart": {
+                "uid": "449C40FE-E207-4AC9-B552-51B007B68D50",
+                "part": 0,
+                "count": 1,
+                "data": "VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4K"
+            },
             "recoveryWords": {
                 "name": "Rainy Day",
                 "format": "BIP39",
                 "words": ["panda", "diary", "marriage", "suffer", "basic", "glare", "surge", "auto", "scissors", "describe", "sell", "unique"]
-            },
-            "knownReceiver": {
-                "name": "Example",
-                "asset": "BTC",
-                "address": "1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2"
             }
         }
         """
@@ -71,27 +73,5 @@ class Tests: XCTestCase {
         }
         """
         XCTAssertThrowsError( try decodeDocument(from: json) )
-    }
-
-    func test1() throws {
-        let json = """
-        {
-            "header": {
-                "format": "AirgappedSigning",
-                "version": 1
-            },
-            "recoveryWords": {
-                "name": "Rainy Day",
-                "format": "BIP39",
-                "words": ["panda", "diary", "marriage", "suffer", "basic", "glare", "surge", "auto", "scissors", "describe", "sell", "unique"]
-            }
-        }
-        """
-
-        let data = json.data(using: .utf8)!
-
-        let decoded = try JSONDecoder().decode(AirgappedSigning.Document.self, from: data)
-
-        dump(decoded)
     }
 }
