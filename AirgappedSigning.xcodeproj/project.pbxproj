@@ -151,7 +151,7 @@
 				};
 			};
 			buildConfigurationList = 03217DAC235E471E007803F7 /* Build configuration list for PBXProject "AirgappedSigning" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
