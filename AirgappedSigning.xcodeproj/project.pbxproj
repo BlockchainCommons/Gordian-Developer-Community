@@ -19,7 +19,6 @@
 		03217DD1235E47F9007803F7 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03217DC6235E47F9007803F7 /* Transaction.swift */; };
 		03217DD2235E47F9007803F7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03217DC7235E47F9007803F7 /* Account.swift */; };
 		03217DD6235E4834007803F7 /* Bitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03217DD4235E4834007803F7 /* Bitcoin.framework */; };
-		03217DD8235E4834007803F7 /* CBitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03217DD5235E4834007803F7 /* CBitcoin.framework */; };
 		03217DE7235E533F007803F7 /* WolfCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03217DE6235E533F007803F7 /* WolfCore */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 			files = (
 				03217DD6235E4834007803F7 /* Bitcoin.framework in Frameworks */,
 				03217DE7235E533F007803F7 /* WolfCore in Frameworks */,
-				03217DD8235E4834007803F7 /* CBitcoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +245,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -285,6 +284,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.AirgappedSigning;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -329,6 +329,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -360,6 +361,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.AirgappedSigning;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;

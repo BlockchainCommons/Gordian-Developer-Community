@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AirgappedSigning.xcodeproj">
+      location = "group:AirgappedSigningDemo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AirgappedSigningDemo.xcodeproj">
+      location = "group:AirgappedSigning.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../Bitcoin/Bitcoin.xcodeproj">

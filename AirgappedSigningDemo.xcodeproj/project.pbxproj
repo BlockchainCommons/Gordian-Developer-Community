@@ -11,6 +11,8 @@
 		03217DEE235EBA51007803F7 /* Bitcoin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03217DEC235EBA51007803F7 /* Bitcoin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03217DF1235EBA58007803F7 /* AirgappedSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03217DF0235EBA58007803F7 /* AirgappedSigning.framework */; };
 		03217DF2235EBA58007803F7 /* AirgappedSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03217DF0235EBA58007803F7 /* AirgappedSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0398AF7A235FA7BB00D2BF49 /* CBitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0398AF79235FA7BB00D2BF49 /* CBitcoin.framework */; };
+		0398AF7B235FA7BB00D2BF49 /* CBitcoin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0398AF79235FA7BB00D2BF49 /* CBitcoin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -37,6 +39,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				03217DF2235EBA58007803F7 /* AirgappedSigning.framework in Embed Frameworks */,
+				0398AF7B235FA7BB00D2BF49 /* CBitcoin.framework in Embed Frameworks */,
 				03217DEE235EBA51007803F7 /* Bitcoin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -47,7 +50,8 @@
 /* Begin PBXFileReference section */
 		03217DEC235EBA51007803F7 /* Bitcoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bitcoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03217DF0235EBA58007803F7 /* AirgappedSigning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AirgappedSigning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD01AFB9204008FA782 /* Signing Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Signing Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0398AF79235FA7BB00D2BF49 /* CBitcoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CBitcoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* SigningDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SigningDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03217DF1235EBA58007803F7 /* AirgappedSigning.framework in Frameworks */,
+				0398AF7A235FA7BB00D2BF49 /* CBitcoin.framework in Frameworks */,
 				03217DED235EBA51007803F7 /* Bitcoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +87,7 @@
 		03217DEB235EBA51007803F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0398AF79235FA7BB00D2BF49 /* CBitcoin.framework */,
 				03217DF0235EBA58007803F7 /* AirgappedSigning.framework */,
 				03217DEC235EBA51007803F7 /* Bitcoin.framework */,
 			);
@@ -101,7 +107,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* Signing Demo.app */,
+				607FACD01AFB9204008FA782 /* SigningDemo.app */,
 				607FACE51AFB9204008FA782 /* AirgappedSigningDemoTests.xctest */,
 			);
 			name = Products;
@@ -165,7 +171,7 @@
 			);
 			name = AirgappedSigningDemo;
 			productName = AirgappedSigning;
-			productReference = 607FACD01AFB9204008FA782 /* Signing Demo.app */;
+			productReference = 607FACD01AFB9204008FA782 /* SigningDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		607FACE41AFB9204008FA782 /* AirgappedSigningDemoTests */ = {
@@ -198,6 +204,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 92TUA8H52D;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -403,11 +410,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 92TUA8H52D;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/AirgappedSigningDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.AirgappedSigningDemo;
-				PRODUCT_NAME = "Signing Demo";
+				PRODUCT_NAME = SigningDemo;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,11 +426,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 92TUA8H52D;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/AirgappedSigningDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.AirgappedSigningDemo;
-				PRODUCT_NAME = "Signing Demo";
+				PRODUCT_NAME = SigningDemo;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -442,7 +451,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signing Demo.app/Signing Demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SigningDemo.app/SigningDemo";
 			};
 			name = Debug;
 		};
@@ -455,7 +464,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signing Demo.app/Signing Demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SigningDemo.app/SigningDemo";
 			};
 			name = Release;
 		};
