@@ -20,7 +20,7 @@
 		03217DD2235E47F9007803F7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03217DC7235E47F9007803F7 /* Account.swift */; };
 		03217DD6235E4834007803F7 /* Bitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03217DD4235E4834007803F7 /* Bitcoin.framework */; };
 		03217DD8235E4834007803F7 /* CBitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03217DD5235E4834007803F7 /* CBitcoin.framework */; };
-		03217DE7235E533F007803F7 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 03217DE6235E533F007803F7 /* SwiftPackageProductDependency */; };
+		03217DE7235E533F007803F7 /* WolfCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03217DE6235E533F007803F7 /* WolfCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03217DD6235E4834007803F7 /* Bitcoin.framework in Frameworks */,
-				03217DE7235E533F007803F7 /* BuildFile in Frameworks */,
+				03217DE7235E533F007803F7 /* WolfCore in Frameworks */,
 				03217DD8235E4834007803F7 /* CBitcoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +129,7 @@
 			);
 			name = AirgappedSigning;
 			packageProductDependencies = (
-				03217DE6235E533F007803F7 /* SwiftPackageProductDependency */,
+				03217DE6235E533F007803F7 /* WolfCore */,
 			);
 			productName = AirgappedSigning;
 			productReference = 03217DB4235E477D007803F7 /* AirgappedSigning.framework */;
@@ -142,6 +142,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Blockchain Commons";
 				TargetAttributes = {
 					03217DB3235E477D007803F7 = {
 						CreatedOnToolsVersion = 11.1;
@@ -150,7 +151,7 @@
 				};
 			};
 			buildConfigurationList = 03217DAC235E471E007803F7 /* Build configuration list for PBXProject "AirgappedSigning" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -159,7 +160,7 @@
 			);
 			mainGroup = 03217DA8235E471E007803F7;
 			packageReferences = (
-				03217DE5235E533F007803F7 /* RemoteSwiftPackageReference */,
+				03217DE5235E533F007803F7 /* XCRemoteSwiftPackageReference "WolfCore" */,
 			);
 			productRefGroup = 03217DB5235E477D007803F7 /* Products */;
 			projectDirPath = "";
@@ -396,7 +397,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		03217DE5235E533F007803F7 /* RemoteSwiftPackageReference */ = {
+		03217DE5235E533F007803F7 /* XCRemoteSwiftPackageReference "WolfCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wolfmcnally/WolfCore.git";
 			requirement = {
@@ -407,9 +408,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		03217DE6235E533F007803F7 /* SwiftPackageProductDependency */ = {
+		03217DE6235E533F007803F7 /* WolfCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03217DE5235E533F007803F7 /* RemoteSwiftPackageReference */;
+			package = 03217DE5235E533F007803F7 /* XCRemoteSwiftPackageReference "WolfCore" */;
 			productName = WolfCore;
 		};
 /* End XCSwiftPackageProductDependency section */
