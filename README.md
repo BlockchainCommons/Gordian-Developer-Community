@@ -27,7 +27,7 @@ git version 2.21.0
 
 ## Installation
 
-`AirgappedSigning` no longer supports building via Cocoapods, but since it relies on embedding the `Bitcoin` framework, which in turn embeds several third-party pre-built binary frameworks (libbitcoin etc.) it is also not suitable for distribution via the Swift Package Manager at this time. So for now, it is built directly as an Xcode project.
+`AirgappedSigning` no longer supports building via Cocoapods, but since it depends on the `Bitcoin` framework, which in turn embeds several third-party pre-built binary frameworks (libbitcoin etc.) it is also not suitable for distribution via the Swift Package Manager at this time. So for now, it is built directly as an Xcode project.
 
 The `AirgappedSigning`, `Bitcoin`, and `CBitcoin` project directories should be siblings in the same directory:
 

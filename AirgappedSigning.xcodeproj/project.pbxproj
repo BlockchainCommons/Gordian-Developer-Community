@@ -38,6 +38,8 @@
 		03217DC7235E47F9007803F7 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		03217DD4235E4834007803F7 /* Bitcoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bitcoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03217DD5235E4834007803F7 /* CBitcoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CBitcoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0398AF83235FACA800D2BF49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0398AF84235FACA800D2BF49 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,8 @@
 		03217DA8235E471E007803F7 = {
 			isa = PBXGroup;
 			children = (
+				0398AF84235FACA800D2BF49 /* LICENSE.md */,
+				0398AF83235FACA800D2BF49 /* README.md */,
 				03217DB8235E477D007803F7 /* Info.plist */,
 				03217DB6235E477D007803F7 /* AirgappedSigning */,
 				03217DB5235E477D007803F7 /* Products */,
