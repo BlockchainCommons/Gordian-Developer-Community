@@ -27,14 +27,14 @@ public struct RecoveryWords: Codable, Checked {
     public let format: Format
     public let words: [String]
 
-    public init(name: String?, format: Format = .BIP39, words: [String]) throws {
+    public init(name: String? = nil, format: Format = .BIP39, words: [String]) throws {
         self.name = name
         self.format = format
         self.words = words
         try check()
     }
 
-    public init(name: String?, format: Format = .BIP39, mnemonic: Mnemonic) throws {
+    public init(name: String? = nil, format: Format = .BIP39, mnemonic: Mnemonic) throws {
         let words = mnemonic®.split(separator: " ").map { String($0) }
         try self.init(name: name, format: format, words: words)
     }
