@@ -79,7 +79,7 @@ public struct Transaction: Codable, Checked {
     public struct Derivation: Codable, Checked {
         public let accountIndex: Int
         public let addressIndex: Int
-        public let isChange: Bool
+        public let chainType: ChainType
 
         public func check() throws {
             try checkNotNegative(accountIndex, context: "Derivation.accountIndex")
@@ -89,13 +89,13 @@ public struct Transaction: Codable, Checked {
         private enum CodingKeys: String, CodingKey {
             case accountIndex
             case addressIndex
-            case isChange
+            case chainType
         }
 
-        public init(accountIndex: Int, addressIndex: Int, isChange: Bool) throws {
+        public init(accountIndex: Int, addressIndex: Int, chainType: ChainType) throws {
             self.accountIndex = accountIndex
             self.addressIndex = addressIndex
-            self.isChange = isChange
+            self.chainType = chainType
             try check()
         }
 
@@ -103,7 +103,7 @@ public struct Transaction: Codable, Checked {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             accountIndex = try container.decode(Int.self, forKey: .accountIndex)
             addressIndex = try container.decode(Int.self, forKey: .addressIndex)
-            isChange = try container.decodeIfPresent(Bool.self, forKey: .isChange) ?? false
+            chainType = try container.decode(ChainType.self, forKey: .chainType)
             try check()
         }
 
@@ -111,9 +111,7 @@ public struct Transaction: Codable, Checked {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(accountIndex, forKey: .accountIndex)
             try container.encode(addressIndex, forKey: .addressIndex)
-            if isChange {
-                try container.encode(true, forKey: .isChange)
-            }
+            try container.encode(chainType, forKey: .chainType)
         }
     }
 
