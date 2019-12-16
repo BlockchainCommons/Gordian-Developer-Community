@@ -20,7 +20,8 @@
 
 import Foundation
 import Bitcoin
-import WolfCore
+import WolfFoundation
+import WolfPipe
 
 public struct RecoveryWords: Codable, Checked {
     public let name: String?

@@ -57,7 +57,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Signing Demo.app"
+               BuildableName = "SigningDemo.app"
                BlueprintName = "AirgappedSigningDemo"
                ReferencedContainer = "container:AirgappedSigningDemo.xcodeproj">
             </BuildableReference>
@@ -97,7 +97,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Signing Demo.app"
+            BuildableName = "SigningDemo.app"
             BlueprintName = "AirgappedSigningDemo"
             ReferencedContainer = "container:AirgappedSigningDemo.xcodeproj">
          </BuildableReference>
@@ -114,7 +114,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Signing Demo.app"
+            BuildableName = "SigningDemo.app"
             BlueprintName = "AirgappedSigningDemo"
             ReferencedContainer = "container:AirgappedSigningDemo.xcodeproj">
          </BuildableReference>

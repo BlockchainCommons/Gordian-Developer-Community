@@ -20,7 +20,6 @@
 
 import Foundation
 import Bitcoin
-import WolfCore
 
 public struct AccountRequest: Codable, Checked {
     public let name: String?

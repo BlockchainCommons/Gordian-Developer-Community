@@ -20,7 +20,7 @@
 
 import Foundation
 import Bitcoin
-import WolfCore
+import WolfFoundation
 
 public struct KnownReceiver: Codable, Checked {
     public let name: String?

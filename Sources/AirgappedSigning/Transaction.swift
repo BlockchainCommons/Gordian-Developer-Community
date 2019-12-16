@@ -20,7 +20,7 @@
 
 import Foundation
 import Bitcoin
-import WolfCore
+import WolfFoundation
 
 public struct Transaction: Codable, Checked {
     public let uid: UUID
