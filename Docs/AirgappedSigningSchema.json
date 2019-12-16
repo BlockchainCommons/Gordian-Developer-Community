@@ -18,6 +18,11 @@
 			"type": "string",
 			"enum": ["BTC", "BTCT"]
 		},
+		"ChainType": {
+			"$comment": "Identifies the chain used to derive the address. May be `external`, `change`, or `identity`.",
+			"type": "string",
+			"enum": ["external", "change", "identity"]
+		},
 		"Fragments": {
 			"$comment": "A whole number count of the smallest unit of an asset; in the case of Bitcoin, the Satoshi.",
 			"type": "number",
@@ -166,7 +171,7 @@
 			"properties": {
 				"accountIndex": { "$ref": "#/definitions/AccountIndex" },
 				"addressIndex": { "$ref": "#/definitions/AddressIndex" },
-				"isChange": { "type": "boolean" }
+				"chainType": { "$ref": "#/definitions/ChainType" }
 			},
 			"required": [
 				"accountIndex",

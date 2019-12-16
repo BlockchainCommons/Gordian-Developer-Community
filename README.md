@@ -11,8 +11,9 @@ See the `Docs` directory for:
 
 ## Requirements
 
-* Swift 5
-* Xcode 11
+* Swift 5.1
+
+* Xcode 11.3
 
 * The `AirgappedSigning` framework depends on the `Bitcoin` framework, which includes a pre-made build of [libbitcoin](https://github.com/libbitcoin). To properly install this, you need to first install the latest version of Git and the Git Large File Storage handler:
 
