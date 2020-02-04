@@ -79,3 +79,9 @@ func checkPositive<N: BinaryInteger>(_ n: N, context: String) throws {
         throw AirgappedSigningError("\(context): Must be positive.")
     }
 }
+
+func checkRange<N: BinaryInteger, R: RangeExpression>(_ n: N, range: R, context: String) throws where R.Bound == N {
+    guard range.contains(n) else {
+        throw AirgappedSigningError("\(context): Must be in range \(range)")
+    }
+}

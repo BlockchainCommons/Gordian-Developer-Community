@@ -155,30 +155,89 @@ public struct Transaction: Codable, Checked {
 
     public struct Output: Codable, Checked {
         public let uid: UUID
-        public let receiver: PaymentAddress
-        public let amount: Fragments
-        public let derivation: Derivation?
+        public let payload: PayloadType
+
+        enum CodingKeys: String, CodingKey {
+            case uid
+            case receiver
+            case amount
+            case derivation
+            case data
+        }
 
         public func check() throws {
-            try checkNotEmpty(receiver®, context: "Output.receiver")
-            try checkPositive(amount®, context: "Output.amount")
+            switch payload {
+            case .spendable(let p):
+                try p.check()
+            case .data(let d):
+                try d.check()
+            }
         }
 
         public init(uid: UUID, receiver: PaymentAddress, amount: Fragments, derivation: Derivation?) throws {
             self.uid = uid
-            self.receiver = receiver
-            self.amount = amount
-            self.derivation = derivation
+            self.payload = .spendable(SpendablePayload(receiver: receiver, amount: amount, derivation: derivation))
+            try check()
+        }
+
+        public init(uid: UUID, data: Data) throws {
+            self.uid = uid
+            self.payload = .data(DataPayload(data: data))
             try check()
         }
 
         public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             uid = try container.decode(UUID.self, forKey: .uid)
-            receiver = try container.decode(PaymentAddress.self, forKey: .receiver)
-            amount = try container.decode(Fragments.self, forKey: .amount)
-            derivation = try container.decodeIfPresent(Derivation.self, forKey: .derivation)
+            if let amount = try container.decodeIfPresent(Fragments.self, forKey: .amount), amount > 0 {
+                let receiver = try container.decode(PaymentAddress.self, forKey: .receiver)
+                let derivation = try container.decodeIfPresent(Derivation.self, forKey: .derivation)
+                self.payload = .spendable(SpendablePayload(receiver: receiver, amount: amount, derivation: derivation))
+            } else {
+                let data = try container.decode(Data.self, forKey: .data)
+                self.payload = .data(DataPayload(data: data))
+            }
             try check()
+        }
+
+        public func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(uid, forKey: .uid)
+            switch payload {
+            case .spendable(let p):
+                try container.encode(p.amount, forKey: .amount)
+                try container.encode(p.receiver, forKey: .receiver)
+                try container.encode(p.derivation, forKey: .derivation)
+            case .data(let d):
+                try container.encode(d.data, forKey: .data)
+            }
+        }
+
+        public struct SpendablePayload {
+            public let receiver: PaymentAddress
+            public let amount: Fragments
+            public let derivation: Derivation?
+
+            public func check() throws {
+                try checkNotEmpty(receiver®, context: "Output.receiver")
+                try checkPositive(amount®, context: "Output.amount")
+            }
+        }
+
+        public struct DataPayload {
+            // https://github.com/bitcoin/bitcoin/blob/365c83e6a8399913cec5f0383978c28f8418fa3b/src/script/standard.h#L33
+            public static let lengthRange = 1...80
+
+            public let data: Data
+
+            public func check() throws {
+                try checkRange(data.count, range: Self.lengthRange, context: "Output.data")
+            }
+        }
+
+        public enum PayloadType {
+            case spendable(SpendablePayload)
+            case data(DataPayload)
         }
     }
 
