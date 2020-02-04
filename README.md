@@ -77,3 +77,9 @@ Wolf McNally, wolf@wolfmcnally.com
 ## License
 
 AirgappedSigning is available under the Apache 2 license. See the LICENSE file for more info.
+
+## Changes
+
+### 0.6.0
+
+* Added data carrier (OP_RETURN) payload type to transaction outputs.
