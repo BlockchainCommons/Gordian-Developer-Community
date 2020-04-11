@@ -1,15 +1,20 @@
 # AirgappedSigning
 
-A protocol for transmission of messages between hot and cold cryptographic wallets.
+A repository for collecting and sharing best practices for protocols supporting airgapped QR code messages between hot and cold cryptographic wallets for signing and key management.
 
-## Documentation
+
+
+
+## Blockchain Commons 2019 Proof of Concept
+
+In 2019 Blockchain Commons did a proof-of-concept of air-gapped signing between two airgapped devices, one written in Swift for iOS, the other using Java on macOS Desktop. Though the POC was functional, some lessons were learned to inform a better architecture in the future.
 
 See the `Docs` directory for:
 
 * `AirgappedSigningSchema.json`, which is JSON Schema document that validates protocol messages.
 * `AirgappedSigningExamples.md`, which is documented examples of the protocol.
 
-## Requirements
+### Requirements for 2019 POC
 
 * Swift 5.1
 
@@ -26,7 +31,7 @@ $ git --version
 git version 2.21.0
 ```
 
-## Installation
+### Installation for 2019 POC
 
 `AirgappedSigning` no longer supports building via Cocoapods, but since it depends on the `Bitcoin` framework, which in turn embeds several third-party pre-built binary frameworks (libbitcoin etc.) it is also not suitable for distribution via the Swift Package Manager at this time. So for now, it is built directly as an Xcode project.
 
@@ -66,20 +71,20 @@ Within Xcode:
 * Wait for the required Swift Packages to resolve
 * Build the `AirgappedSigning` target for an available platform.
 
-## Unit Tests
+### Unit Tests for 2019 POC
 
 The `AirgappedSigningDemo` app is simply an iOS container for the test suite. To run the unit tests, select the `AirgappedSigningDemo` target and then `Product > Test`.
 
-## Author
+### Author of 2019 POC
 
 Wolf McNally, wolf@wolfmcnally.com
 
-## License
+### License for 2019 POC
 
 AirgappedSigning is available under the Apache 2 license. See the LICENSE file for more info.
 
-## Changes
+### Changes in 2019 POC
 
-### 0.6.0
+#### 0.6.0
 
 * Added data carrier (OP_RETURN) payload type to transaction outputs.
