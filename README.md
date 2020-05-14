@@ -1,90 +1,85 @@
-# AirgappedSigning
+# Blockchain Commons Airgapped Signing
 
-A repository for collecting and sharing best practices for protocols supporting airgapped QR code messages between hot and cold cryptographic wallets for signing and key management.
+**Airgapped Signing** is a repository for collecting and sharing best practices for protocols supporting airgapped QR code messages between hot and cold cryptographic wallets for signing and key management.
 
+## Additional Information
 
+The following files contai additional information:
 
+* [Proof of Concept: 2019](PoC_2019/README.md) - In 2019 Blockchain Commons did a proof-of-concept of air-gapped signing between two airgapped devices, one written in Swift for iOS, the other using Java on macOS Desktop. Full code and information is available here
 
-## Blockchain Commons 2019 Proof of Concept
+## Status - Late Alpha
 
-In 2019 Blockchain Commons did a proof-of-concept of air-gapped signing between two airgapped devices, one written in Swift for iOS, the other using Java on macOS Desktop. Though the POC was functional, some lessons were learned to inform a better architecture in the future.
+**Airgapped Signing**  is currently under active development and in the late alpha testing phase. It should not be used for production tasks until it has had further testing and auditing.
 
-See the `Docs` directory for:
+## Origin, Authors, Copyright & Licenses
 
-* `AirgappedSigningSchema.json`, which is JSON Schema document that validates protocol messages.
-* `AirgappedSigningExamples.md`, which is documented examples of the protocol.
+Unless otherwise noted (either in this [/README.md](./README.md) or in the file's header comments) the contents of this repository are Copyright © 2020 by Blockchain Commons, LLC, and are [licensed](./LICENSE) under the [spdx:BSD-2-Clause Plus Patent License](https://spdx.org/licenses/BSD-2-Clause-Patent.html).
 
-### Requirements for 2019 POC
+In most cases, the authors, copyright, and license for each file reside in header comments in the source code. When it does not, we have attempted to attribute it accurately in the table below.
 
-* Swift 5.1
+This table below also establishes provenance (repository of origin, permalink, and commit id) for files included from repositories that are outside of this repo. Contributors to these files are listed in the commit history for each repository, first with changes found in the commit history of this repo, then in changes in the commit history of their repo of their origin.
 
-* Xcode 11.3
+| File      | From                                                         | Commit                                                       | Authors & Copyright (c)                                | License                                                     |
+| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------ | ----------------------------------------------------------- |
+| exception-to-the-rule.c or exception-folder | [https://github.com/community/repo-name/PERMALINK](https://github.com/community/repo-name/PERMALINK) | [https://github.com/community/repo-name/commit/COMMITHASH]() | 2020 Exception Author  | [MIT](https://spdx.org/licenses/MIT)                        |
 
-* The `AirgappedSigning` framework depends on the `Bitcoin` framework, which includes a pre-made build of [libbitcoin](https://github.com/libbitcoin). To properly install this, you need to first install the latest version of Git and the Git Large File Storage handler:
+### Dependencies
 
-```bash
-$ brew install git
-$ brew install git-lfs
-$ which git
-/usr/local/bin/git
-$ git --version
-git version 2.21.0
-```
+To build  `$projectname` you'll need to use the following tools:
 
-### Installation for 2019 POC
+- autotools - Gnu Build System from Free Software Foundation ([intro](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html)).
 
-`AirgappedSigning` no longer supports building via Cocoapods, but since it depends on the `Bitcoin` framework, which in turn embeds several third-party pre-built binary frameworks (libbitcoin etc.) it is also not suitable for distribution via the Swift Package Manager at this time. So for now, it is built directly as an Xcode project.
+### Derived from…
 
-The `AirgappedSigning`, `Bitcoin`, and `CBitcoin` project directories should be siblings in the same directory:
+This  `$projectname` project is either derived from or was inspired by:
 
-```
-MyProjects
-|
-+—— CBitcoin
-|   |
-|   +—— CBitcoin.xcodeproj
-|
-+—— Bitcoin
-|   |
-|   +—— Bitcoin.xcodeproj
-|
-+—— AirgappedSigning
-    |
-    +—— AirgappedSigning.xcworkspace    
-```
+- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com).
 
-```bash
-$ cd MyProjects
-$ git clone https://github.com/BlockchainCommons/iOS-CBitcoin.git CBitcoin
-$ git clone https://github.com/BlockchainCommons/iOS-Bitcoin.git Bitcoin
-$ git clone https://github.com/BlockchainCommons/AirgappedSigning.git AirgappedSigning
-$ cd CBitcoin/Sources
-$ unzip -q Frameworks.zip
-$ cd ../../AirgappedSigning
-$ open AirgappedSigning.xcworkspace/
-```
+### Used with…
 
-⚠️Make sure you open `AirgappedSigning.xcworkspace` and not `AirgappedSigning.xcodeproj`.
+These are other projects that work with or leverage `$projectname`:
 
-Within Xcode:
+- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com).
 
-* Wait for the required Swift Packages to resolve
-* Build the `AirgappedSigning` target for an available platform.
+## Financial Support
 
-### Unit Tests for 2019 POC
+**Airgapped Signing** is a project of [Blockchain Commons](https://www.blockchaincommons.com/). We are proudly a "not-for-profit" social benefit corporation committed to open source & open development. Our work is funded entirely by donations and collaborative partnerships with people like you. Every contribution will be spent on building open tools, technologies, and techniques that sustain and advance blockchain and internet security infrastructure and promote an open web.
 
-The `AirgappedSigningDemo` app is simply an iOS container for the test suite. To run the unit tests, select the `AirgappedSigningDemo` target and then `Product > Test`.
+To financially support further development of **Airgapped Signing** and other projects, please consider becoming a Patron of Blockchain Commons through ongoing monthly patronage as a [GitHub Sponsor](https://github.com/sponsors/BlockchainCommons). You can also support Blockchain Commons with bitcoins at our [BTCPay Server](https://btcpay.blockchaincommons.com/).
 
-### Author of 2019 POC
+## Contributing
 
-Wolf McNally, wolf@wolfmcnally.com
+We encourage public contributions through issues and pull requests! Please review [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our development process. All contributions to this repository require a GPG signed [Contributor License Agreement](./CLA.md).
 
-### License for 2019 POC
+### Questions & Support
 
-AirgappedSigning is available under the Apache 2 license. See the LICENSE file for more info.
+As an open-source, open-development community, Blockchain Commons does not have the resources to provide direct support of our projects. If you have questions or problems, please use this repository's [issues](./issues) feature. Unfortunately, we can not make any promises on response time.
 
-### Changes in 2019 POC
+If your company requires support to use our projects, please feel free to contact us directly about options. We may be able to offer you a contract for support from one of our contributors, or we might be able to point you to another entity who can offer the contractual support that you need.
 
-#### 0.6.0
+### Credits
 
-* Added data carrier (OP_RETURN) payload type to transaction outputs.
+The following people directly contributed to this repository. You can add your name here by getting involved. The first step is learning how to contribute from our [CONTRIBUTING.md](./CONTRIBUTING.md) documentation.
+
+| Name              | Role                | Github                                            | Email                                 | GPG Fingerprint                                    |
+| ----------------- | ------------------- | ------------------------------------------------- | ------------------------------------- | -------------------------------------------------- |
+| Christopher Allen | Principal Architect | [@ChristopherA](https://github.com/@ChristopherA) | \<ChristopherA@LifeWithAlacrity.com\> | FDFE 14A5 4ECB 30FC 5D22  74EF F8D3 6C91 3574 05ED |
+
+## Responsible Disclosure
+
+We want to keep all of our software safe for everyone. If you have discovered a security vulnerability, we appreciate your help in disclosing it to us in a responsible manner. We are unfortunately not able to offer bug bounties at this time.
+
+We do ask that you offer us good faith and use best efforts not to leak information or harm any user, their data, or our developer community. Please give us a reasonable amount of time to fix the issue before you publish it. Do not defraud our users or us in the process of discovery. We promise not to bring legal action against researchers who point out a problem provided they do their best to follow the these guidelines.
+
+### Reporting a Vulnerability
+
+Please report suspected security vulnerabilities in private via email to ChristopherA@BlockchainCommons.com (do not use this email for support). Please do NOT create publicly viewable issues for suspected security vulnerabilities.
+
+The following keys may be used to communicate sensitive information to developers:
+
+| Name              | Fingerprint                                        |
+| ----------------- | -------------------------------------------------- |
+| Christopher Allen | FDFE 14A5 4ECB 30FC 5D22  74EF F8D3 6C91 3574 05ED |
+
+You can import a key by running the following command with that individual’s fingerprint: `gpg --recv-keys "<fingerprint>"` Ensure that you put quotes around fingerprints that contain spaces.
