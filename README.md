@@ -22,11 +22,11 @@ As of the end of August we now have access to a new GitHub feature [Discussions]
      * [Christopher Allen](mailto:ChristopherA@LifeWithAlacrity.com) (github: [@ChristopherA](https://github.com/christophera/) twitter: [@ChristopherA](https:twitter.com/ChristopherA) )
      * [Peter Denton](mailto:fontainedenton@googlemail.com ) (github: [@Fonta1n3](https://github.com/Fonta1n3/) twitter: [@Fonta1n3](https://twitter.com/Fonta1n3))
      * [Wolf McNally](mailto:wolf@wolfmcnally.com) (github: [@WolfMcNally](https://github.com/WolfMcNally/) twitter: [@WolfMcNally](https://twitter.com/WolfMcNally/))
-     * + multiple interns and other contributors
+     * \+ multiple interns and other contributors
 
 ----
 
-## Old information to be Pruned, Gardend or Archived
+## Old information to be Gardened, Pruned or Archived
 
 ## Additional Files in this repository
 
