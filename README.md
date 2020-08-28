@@ -1,85 +1,35 @@
 # Blockchain Commons Airgapped Signing
 
-**Airgapped Signing** is a repository for collecting and sharing best practices for protocols supporting airgapped QR code messages between hot and cold cryptographic wallets for signing and key management.
+## Mission
 
-## Additional Information
+**Airgapped Signing** is a community of cryptocurrency wallet developers, sharing best practices and interoperability for airgapped QR code communications between multiple vendors on multiple platforms. These best practices include support for hot, cold and multisig cryptographic wallets, research & proposals for data formats and protocols, security and UX for multisig work flows, and other key management and signing issues and topics.
 
-The following files contai additional information:
+## Discussions
 
-* [Proof of Concept: 2019](PoC_2019/README.md) - In 2019 Blockchain Commons did a proof-of-concept of air-gapped signing between two airgapped devices, one written in Swift for iOS, the other using Java on macOS Desktop. Full code and information is available here
+To date we have been holding discussions on these topics in an invite-only semi-private Signal group chat, and in [open issues](https://github.com/BlockchainCommons/AirgappedSigning/issues) in this repository, as well as a variety of research, proposals and POCs in other repositories.
 
-## Status - Late Alpha
+As of the end of August we now have access to a new GitHub feature [Discussions](https://github.com/BlockchainCommons/AirgappedSigning/discussions) and we will be moving more of our conversations there.
 
-**Airgapped Signing**  is currently under active development and in the late alpha testing phase. It should not be used for production tasks until it has had further testing and auditing.
+## Members
 
-## Origin, Authors, Copyright & Licenses
+* [Blockchain Commons](https://www.BlockchainCommons.com) (open source repos: [GitHub/BlockchainCommons](https://GitHub.com/BlockchainCommons) twitter: [@BlockchainComns](https://twitter.com/BlockchainComns) )
+   * Wallets & Major Projects
+     * [Gordian](https://github.com/BlockchainCommons/Gordian)(including [GordianServer-macOS](https://github.com/BlockchainCommons/GordianServer-macOS), [GordianWallet-iOS](https://github.com/BlockchainCommons/GordianWallet-iOS)
+     * [LetheKit](https://github.com/BlockchainCommons/bc-lethekit)
+     * [#SmartCustody Book](https://github.com/BlockchainCommons/SmartCustodyBook)
+     * [Learning Bitcoin from the Command Line Course](https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line)
+   * People:
+     * [Christopher Allen](mailto:ChristopherA@LifeWithAlacrity.com) (github: [@ChristopherA](https://github.com/christophera/) twitter: [@ChristopherA](https:twitter.com/ChristopherA) )
+     * [Peter Denton](mailto:fontainedenton@googlemail.com ) (github: [@Fonta1n3](https://github.com/Fonta1n3/) twitter: [@Fonta1n3](https://twitter.com/Fonta1n3))
+     * [Wolf McNally](mailto:wolf@wolfmcnally.com) (github: [@WolfMcNally](https://github.com/WolfMcNally/) twitter: [@WolfMcNally](https://twitter.com/WolfMcNally/))
+     * + multiple interns and other contributors
 
-Unless otherwise noted (either in this [/README.md](./README.md) or in the file's header comments) the contents of this repository are Copyright © 2020 by Blockchain Commons, LLC, and are [licensed](./LICENSE) under the [spdx:BSD-2-Clause Plus Patent License](https://spdx.org/licenses/BSD-2-Clause-Patent.html).
+----
 
-In most cases, the authors, copyright, and license for each file reside in header comments in the source code. When it does not, we have attempted to attribute it accurately in the table below.
+## Old information to be Pruned, Gardend or Archived
 
-This table below also establishes provenance (repository of origin, permalink, and commit id) for files included from repositories that are outside of this repo. Contributors to these files are listed in the commit history for each repository, first with changes found in the commit history of this repo, then in changes in the commit history of their repo of their origin.
+## Additional Files in this repository
 
-| File      | From                                                         | Commit                                                       | Authors & Copyright (c)                                | License                                                     |
-| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------ | ----------------------------------------------------------- |
-| exception-to-the-rule.c or exception-folder | [https://github.com/community/repo-name/PERMALINK](https://github.com/community/repo-name/PERMALINK) | [https://github.com/community/repo-name/commit/COMMITHASH]() | 2020 Exception Author  | [MIT](https://spdx.org/licenses/MIT)                        |
+The following folders in this repository contain other information:
 
-### Dependencies
-
-To build  `$projectname` you'll need to use the following tools:
-
-- autotools - Gnu Build System from Free Software Foundation ([intro](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html)).
-
-### Derived from…
-
-This  `$projectname` project is either derived from or was inspired by:
-
-- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com).
-
-### Used with…
-
-These are other projects that work with or leverage `$projectname`:
-
-- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com).
-
-## Financial Support
-
-**Airgapped Signing** is a project of [Blockchain Commons](https://www.blockchaincommons.com/). We are proudly a "not-for-profit" social benefit corporation committed to open source & open development. Our work is funded entirely by donations and collaborative partnerships with people like you. Every contribution will be spent on building open tools, technologies, and techniques that sustain and advance blockchain and internet security infrastructure and promote an open web.
-
-To financially support further development of **Airgapped Signing** and other projects, please consider becoming a Patron of Blockchain Commons through ongoing monthly patronage as a [GitHub Sponsor](https://github.com/sponsors/BlockchainCommons). You can also support Blockchain Commons with bitcoins at our [BTCPay Server](https://btcpay.blockchaincommons.com/).
-
-## Contributing
-
-We encourage public contributions through issues and pull requests! Please review [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our development process. All contributions to this repository require a GPG signed [Contributor License Agreement](./CLA.md).
-
-### Questions & Support
-
-As an open-source, open-development community, Blockchain Commons does not have the resources to provide direct support of our projects. If you have questions or problems, please use this repository's [issues](./issues) feature. Unfortunately, we can not make any promises on response time.
-
-If your company requires support to use our projects, please feel free to contact us directly about options. We may be able to offer you a contract for support from one of our contributors, or we might be able to point you to another entity who can offer the contractual support that you need.
-
-### Credits
-
-The following people directly contributed to this repository. You can add your name here by getting involved. The first step is learning how to contribute from our [CONTRIBUTING.md](./CONTRIBUTING.md) documentation.
-
-| Name              | Role                | Github                                            | Email                                 | GPG Fingerprint                                    |
-| ----------------- | ------------------- | ------------------------------------------------- | ------------------------------------- | -------------------------------------------------- |
-| Christopher Allen | Principal Architect | [@ChristopherA](https://github.com/ChristopherA) | \<ChristopherA@LifeWithAlacrity.com\> | FDFE 14A5 4ECB 30FC 5D22  74EF F8D3 6C91 3574 05ED |
-
-## Responsible Disclosure
-
-We want to keep all of our software safe for everyone. If you have discovered a security vulnerability, we appreciate your help in disclosing it to us in a responsible manner. We are unfortunately not able to offer bug bounties at this time.
-
-We do ask that you offer us good faith and use best efforts not to leak information or harm any user, their data, or our developer community. Please give us a reasonable amount of time to fix the issue before you publish it. Do not defraud our users or us in the process of discovery. We promise not to bring legal action against researchers who point out a problem provided they do their best to follow the these guidelines.
-
-### Reporting a Vulnerability
-
-Please report suspected security vulnerabilities in private via email to ChristopherA@BlockchainCommons.com (do not use this email for support). Please do NOT create publicly viewable issues for suspected security vulnerabilities.
-
-The following keys may be used to communicate sensitive information to developers:
-
-| Name              | Fingerprint                                        |
-| ----------------- | -------------------------------------------------- |
-| Christopher Allen | FDFE 14A5 4ECB 30FC 5D22  74EF F8D3 6C91 3574 05ED |
-
-You can import a key by running the following command with that individual’s fingerprint: `gpg --recv-keys "<fingerprint>"` Ensure that you put quotes around fingerprints that contain spaces.
+* [Proof of Concept: 2019](PoC_2019/README.md) - In 2019 Blockchain Commons did a proof-of-concept of air-gapped signing between two airgapped devices, one written in Swift for iOS, the other using Java on macOS Desktop. Full code and information is available here.
