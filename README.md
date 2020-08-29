@@ -23,6 +23,16 @@ As of the end of August we now have access to a new GitHub feature [Discussions]
      * [Peter Denton](mailto:fontainedenton@googlemail.com ) (github: [@Fonta1n3](https://github.com/Fonta1n3/) twitter: [@Fonta1n3](https://twitter.com/Fonta1n3))
      * [Wolf McNally](mailto:wolf@wolfmcnally.com) (github: [@WolfMcNally](https://github.com/WolfMcNally/) twitter: [@WolfMcNally](https://twitter.com/WolfMcNally/))
      * \+ multiple interns and other contributors
+* [Cobo Vault](https://www.cobo.com/hardware-wallet) (open source repos: [GitHub/CoboVault](https://GitHub.com/CoboVault) twitter: [@CoboVault](https://twitter.com/CoboVault) )
+   * Products - Cobo Vault
+     * [CoboVault Application](https://github.com/CoboVault/cobo-vault-cold)
+     * [CoboVault SecureElement](https://github.com/CoboVault/cobo-vault-se-firmware)
+     * [crypto-coin-kit](https://github.com/CoboVault/crypto-coin-kit)
+   * People:
+     * [Aaron Chen](mailto:chend@cobo.com) (github: [@aaronisme](https://github.com/aaronisme/) twitter: [@Aaron Chen](https://twitter.com/aaron1sme) )
+     * [Lixin Liu](mailto:lixin@cobo.com ) (twitter: [@BitcoinLixin](https://twitter.com/BitcoinLixin/))
+     * \+ multiple other contributors
+
 
 ----
 
