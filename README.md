@@ -32,7 +32,14 @@ As of the end of August we now have access to a new GitHub feature [Discussions]
      * [Aaron Chen](mailto:chend@cobo.com) (github: [@aaronisme](https://github.com/aaronisme/) twitter: [@Aaron Chen](https://twitter.com/aaron1sme) )
      * [Lixin Liu](mailto:lixin@cobo.com ) (twitter: [@BitcoinLixin](https://twitter.com/BitcoinLixin/))
      * \+ multiple other contributors
-
+* [Foundation Devices](https://foundationdevices.com) (open source repos: [GitHub/Foundation-Devices](http://github.com/Foundation-Devices) twitter: [@FOUNDATIONdvcs](https://twitter.com/FOUNDATIONdvcs) )
+   * Projects
+     * Passport (public repos coming this Fall)
+     * [Python UR Library](https://github.com/Foundation-Devices/foundation-ur-py)
+   * People:
+     * [Ken Carpenter](mailto:ken@foundationdevices.com) (github: [@FoundationKen](https://github.com/FoundationKen/) twitter: [@KenOfFoundation](https://twitter.com/KenOfFoundation) )
+     * [Zach Herbert](mailto:zach@foundationdevices.com ) (github: [@zachherbert](https://github.com/zachherbert/) twitter: [@zachherbert](https://twitter.com/zachherbert/) )
+     * \+ interns and other contributors 
 
 ----
 
