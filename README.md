@@ -40,7 +40,11 @@ As of the end of August we now have access to a new GitHub feature [Discussions]
      * [Ken Carpenter](mailto:ken@foundationdevices.com) (github: [@FoundationKen](https://github.com/FoundationKen/) twitter: [@KenOfFoundation](https://twitter.com/KenOfFoundation) )
      * [Zach Herbert](mailto:zach@foundationdevices.com ) (github: [@zachherbert](https://github.com/zachherbert/) twitter: [@zachherbert](https://twitter.com/zachherbert/) )
      * \+ interns and other contributors 
-
+* [Sparrow Wallet](https://sparrowwallet.com) (open source repos: [GitHub/Sparrow Wallet](https://github.com/sparrowwallet) twitter: [@SparrowWallet](https://twitter.com/SparrowWallet) )
+   * Projects
+     * Sparrow Wallet (https://github.com/sparrowwallet/sparrow)
+   * People:
+     * [Craig Raw](mailto:mail@sparrowwallet.com) (github: [@craigraw](https://github.com/craigraw/) twitter: [@craigraw](https://twitter.com/craigraw) )
 ----
 
 ## Old information to be Gardened, Pruned or Archived
