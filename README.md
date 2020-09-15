@@ -6,9 +6,11 @@
 
 ## Discussions
 
-To date we have been holding discussions on these topics in an invite-only semi-private Signal group chat, and in [open issues](https://github.com/BlockchainCommons/AirgappedSigning/issues) in this repository, as well as a variety of research, proposals and POCs in other repositories.
+### Discussions
 
-As of the end of August we now have access to a new GitHub feature [Discussions](https://github.com/BlockchainCommons/AirgappedSigning/discussions) and we will be moving more of our conversations there.
+The best place to talk about Blockchain Commons and its projects is in our GitHub Discussions areas.
+
+[**Wallet Standard Discussions**](https://github.com/BlockchainCommons/AirgappedSigning/discussions). For standards and open-source developers who want to talk about wallet standards, please use the Discussions area of the [Airgapped Signing repo](https://github.com/BlockchainCommons/AirgappedSigning). This is where you can talk about projects like our [LetheKit](https://github.com/BlockchainCommons/bc-lethekit) and command line tools such as [seedtool](https://github.com/BlockchainCommons/bc-seedtool-cli), both of which are intended to testbed wallet technologies, plus the libraries that we've built to support your own deployment of wallet technology such as [bc-bip39](https://github.com/BlockchainCommons/bc-bip39), [bc-slip39](https://github.com/BlockchainCommons/bc-slip39), [bc-shamir](https://github.com/BlockchainCommons/bc-shamir), [Shamir Secret Key Recovery](https://github.com/BlockchainCommons/bc-sskr), [bc-ur](https://github.com/BlockchainCommons/bc-ur), and the [bc-crypto-base](https://github.com/BlockchainCommons/bc-crypto-base). If it's a wallet-focused technology or a more general discussion of wallet standards,discuss it here.
 
 ## Members
 
