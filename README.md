@@ -45,6 +45,7 @@ The best place to talk about Blockchain Commons and its projects is in our GitHu
 * [Sparrow Wallet](https://sparrowwallet.com) (open source repos: [GitHub/Sparrow Wallet](https://github.com/sparrowwallet) twitter: [@SparrowWallet](https://twitter.com/SparrowWallet) )
    * Projects
      * Sparrow Wallet (https://github.com/sparrowwallet/sparrow)
+     * Hummingbird - Java UR library (https://github.com/sparrowwallet/hummingbird)
    * People:
      * [Craig Raw](mailto:mail@sparrowwallet.com) (github: [@craigraw](https://github.com/craigraw/) twitter: [@craigraw](https://twitter.com/craigraw) )
 ----
