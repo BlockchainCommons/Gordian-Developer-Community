@@ -16,7 +16,7 @@ The best place to talk about Blockchain Commons and its projects is in our GitHu
 
 * [Blockchain Commons](https://www.BlockchainCommons.com) (open source repos: [GitHub/BlockchainCommons](https://GitHub.com/BlockchainCommons) twitter: [@BlockchainComns](https://twitter.com/BlockchainComns) )
    * Wallets & Major Projects
-     * [Gordian](https://github.com/BlockchainCommons/Gordian)(including [GordianServer-macOS](https://github.com/BlockchainCommons/GordianServer-macOS), [GordianWallet-iOS](https://github.com/BlockchainCommons/GordianWallet-iOS)
+     * [Gordian](https://github.com/BlockchainCommons/Gordian)(including [GordianServer-macOS](https://github.com/BlockchainCommons/GordianServer-macOS), [GordianWallet-iOS](https://github.com/BlockchainCommons/GordianWallet-iOS), [GordianSigner-Android](https://github.com/BlockchainCommons/GordianSigner-Android), [GordianSigner-Catalyst](https://github.com/BlockchainCommons/GordianSigner-Catalyst), and [GordianSigner-macOS](https://github.com/BlockchainCommons/GordianSigner-macOS))
      * [LetheKit](https://github.com/BlockchainCommons/bc-lethekit)
      * [#SmartCustody Book](https://github.com/BlockchainCommons/SmartCustodyBook)
      * [Learning Bitcoin from the Command Line Course](https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line)
