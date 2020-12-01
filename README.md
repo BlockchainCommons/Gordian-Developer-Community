@@ -1,4 +1,5 @@
 # Blockchain Commons Airgapped Signing
+<img src="images/logos/airgap.png" align="right">
 
 ## Mission
 
