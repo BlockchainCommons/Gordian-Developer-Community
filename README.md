@@ -1,5 +1,7 @@
 # Airgapped Wallet Community
 
+![](images/logos/airgapped-wallet-community.jpg)
+
 <img src="images/logos/airgap.png" align="right">
 
 ## Mission
