@@ -27,15 +27,21 @@ The best place to talk about Blockchain Commons and its projects is in our GitHu
      * [Peter Denton](mailto:fontainedenton@googlemail.com ) (github: [@Fonta1n3](https://github.com/Fonta1n3/) twitter: [@Fonta1n3](https://twitter.com/Fonta1n3))
      * [Wolf McNally](mailto:wolf@wolfmcnally.com) (github: [@WolfMcNally](https://github.com/WolfMcNally/) twitter: [@WolfMcNally](https://twitter.com/WolfMcNally/))
      * \+ multiple interns and other contributors
+* [Keystone](https://keyst.one/) (open source repos: [GitHub/Keystone](https://github.com/KeystoneHQ) twitter: [@KeystoneWallet](https://twitter.com/KeystoneWallet) )
+   * Projects
+     * [Keystone firmware](https://github.com/KeystoneHQ/Keystone-cold-app)
+     * [Keystone BTC firmware](https://github.com/KeystoneHQ/Keystone-cold-app-btc)
+     * [UR-Registry](https://github.com/KeystoneHQ/ur-registry)
+   * People:
+     * [Aaron Chen](mailto:aaron@keyst.one) (github: [@aaronisme](https://github.com/aaronisme/) twitter: [@Aaron Chen](https://twitter.com/aaron1sme) )
+     * [Lixin Liu](mailto:lixin@keyst.one ) (twitter: [@BitcoinLixin](https://twitter.com/BitcoinLixin/))
+     * [Sora Li](mailto:sora@keyst.one) (github: [@soralit](https://github.com/soralit/))
+     * \+ multiple other contributors
 * [Cobo Vault](https://www.cobo.com/hardware-wallet) (open source repos: [GitHub/CoboVault](https://GitHub.com/CoboVault) twitter: [@CoboVault](https://twitter.com/CoboVault) )
    * Products - Cobo Vault
      * [CoboVault Application](https://github.com/CoboVault/cobo-vault-cold)
      * [CoboVault SecureElement](https://github.com/CoboVault/cobo-vault-se-firmware)
      * [crypto-coin-kit](https://github.com/CoboVault/crypto-coin-kit)
-   * People:
-     * [Aaron Chen](mailto:chend@cobo.com) (github: [@aaronisme](https://github.com/aaronisme/) twitter: [@Aaron Chen](https://twitter.com/aaron1sme) )
-     * [Lixin Liu](mailto:lixin@cobo.com ) (twitter: [@BitcoinLixin](https://twitter.com/BitcoinLixin/))
-     * \+ multiple other contributors
 * [Foundation Devices](https://foundationdevices.com) (open source repos: [GitHub/Foundation-Devices](http://github.com/Foundation-Devices) twitter: [@FOUNDATIONdvcs](https://twitter.com/FOUNDATIONdvcs) )
    * Projects
      * Passport (public repos coming this Fall)
