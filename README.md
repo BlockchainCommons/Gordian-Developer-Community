@@ -1,6 +1,6 @@
 # Airgapped Wallet Community
 
-![](images/logos/airgapped-wallet-community-image.jpg)
+![](images/logos/airgapped-wallet-community-v2-screen.jpg)
 
 <img src="images/logos/airgap.png" align="right">
 
