@@ -1,4 +1,4 @@
-# Airgapped Wallet Community
+# Gordian Developer Community
 
 ![](images/logos/airgapped-wallet-community-v3-screen.jpg)
 
@@ -6,13 +6,13 @@
 
 ## Mission
 
-**Airgapped Wallet Community** is a community of cryptocurrency wallet developers, sharing best practices and interoperability for airgapped QR code communications between multiple vendors on multiple platforms. These best practices include support for hot, cold and multisig cryptographic wallets, research & proposals for data formats and protocols, security and UX for multisig work flows, and other key management and signing issues and topics.
+**Gordian Developer Community** is a community of cryptocurrency & identity wallet developers, sharing best practices for paritioned interoperability among multiple vendors on multiple platforms. These best practices include support for hot, cold and multisig cryptographic wallets, research & proposals for data formats and protocols, usage of gaps such as airgaps and torgaps, security and UX for multisig work flows, and other key management and signing issues and topics, particularly those that support the [Gordian Principles](https://github.com/BlockchainCommons/Gordian#gordian-principles) of independence, privacy, resilience, and openness.
 
 ## Discussions
 
 The best place to talk about Blockchain Commons and its projects is in our GitHub Discussions areas.
 
-[**Wallet Standard Discussions**](https://github.com/BlockchainCommons/AirgappedSigning/discussions). For standards and open-source developers who want to talk about wallet standards, please use the Discussions area of the [Airgapped Signing repo](https://github.com/BlockchainCommons/AirgappedSigning). This is where you can talk about projects like our [LetheKit](https://github.com/BlockchainCommons/bc-lethekit) and command line tools such as [seedtool](https://github.com/BlockchainCommons/bc-seedtool-cli), both of which are intended to testbed wallet technologies, plus the libraries that we've built to support your own deployment of wallet technology such as [bc-bip39](https://github.com/BlockchainCommons/bc-bip39), [bc-slip39](https://github.com/BlockchainCommons/bc-slip39), [bc-shamir](https://github.com/BlockchainCommons/bc-shamir), [Shamir Secret Key Recovery](https://github.com/BlockchainCommons/bc-sskr), [bc-ur](https://github.com/BlockchainCommons/bc-ur), and the [bc-crypto-base](https://github.com/BlockchainCommons/bc-crypto-base). If it's a wallet-focused technology or a more general discussion of wallet standards,discuss it here.
+[**Gordian Developer Community**](https://github.com/BlockchainCommons/AirgappedSigning/discussions). For standards and open-source developers who want to talk about wallet standards, please use the Discussions area of the [Gordian Developer repo](https://github.com/BlockchainCommons/Gordian-Developer-Community). This is where you can talk about projects like our [LetheKit](https://github.com/BlockchainCommons/bc-lethekit) and command line tools such as [seedtool](https://github.com/BlockchainCommons/bc-seedtool-cli), both of which are intended to testbed wallet technologies, plus the libraries that we've built to support your own deployment of wallet technology such as [bc-bip39](https://github.com/BlockchainCommons/bc-bip39), [bc-slip39](https://github.com/BlockchainCommons/bc-slip39), [bc-shamir](https://github.com/BlockchainCommons/bc-shamir), [Shamir Secret Key Recovery](https://github.com/BlockchainCommons/bc-sskr), [bc-ur](https://github.com/BlockchainCommons/bc-ur), and the [bc-crypto-base](https://github.com/BlockchainCommons/bc-crypto-base). If it's a wallet-focused technology or a more general discussion of wallet standards,discuss it here.
 
 ## Members
 
@@ -65,7 +65,7 @@ The following folders in this repository contain other information:
 
 ## Status - Work in Progress
 
-**Airgapped Wallet Community** is by definition a work-in-progress, as it contains active discussions among its members.
+**Gordian Developer Community** is by definition a work-in-progress, as it contains active discussions among its members.
 
 ## Origin, Authors, Copyright & Licenses
 
@@ -73,7 +73,7 @@ Unless otherwise noted (either in this [/README.md](./README.md) or in the file'
 
 ## Financial Support
 
-**Airgapped Wallet Community** is a project of [Blockchain Commons](https://www.blockchaincommons.com/). We are proudly a "not-for-profit" social benefit corporation committed to open source & open development. Our work is funded entirely by donations and collaborative partnerships with people like you. Every contribution will be spent on building open tools, technologies, and techniques that sustain and advance blockchain and internet security infrastructure and promote an open web.
+**Gordian Developer Community** is a project of [Blockchain Commons](https://www.blockchaincommons.com/). We are proudly a "not-for-profit" social benefit corporation committed to open source & open development. Our work is funded entirely by donations and collaborative partnerships with people like you. Every contribution will be spent on building open tools, technologies, and techniques that sustain and advance blockchain and internet security infrastructure and promote an open web.
 
 To financially support further development of `$projectname` and other projects, please consider becoming a Patron of Blockchain Commons through ongoing monthly patronage as a [GitHub Sponsor](https://github.com/sponsors/BlockchainCommons). You can also support Blockchain Commons with bitcoins at our [BTCPay Server](https://btcpay.blockchaincommons.com/).
 
