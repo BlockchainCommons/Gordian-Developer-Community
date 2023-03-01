@@ -8,6 +8,27 @@
 
 **Gordian Developer Community** is a community of cryptocurrency & identity wallet developers, sharing best practices for paritioned interoperability among multiple vendors on multiple platforms. These best practices include support for hot, cold and multisig cryptographic wallets, research & proposals for data formats and protocols, usage of gaps such as airgaps and torgaps, security and UX for multisig work flows, and other key management and signing issues and topics, particularly those that support the [Gordian Principles](https://github.com/BlockchainCommons/Gordian#gordian-principles) of independence, privacy, resilience, and openness.
 
+## URs
+
+One of our most successful interoperable specifications to date has been `ur:`. Following is a table of usage. 
+
+_Please submit PRs if you are aware of different usages or to make corrections._
+
+| Wallet | Animated PSBT | ur:crypto-psbt | ur:crypto-* | Future |
+| ---------- | ------------- | -------------- | --------------------------------------------------------- | --- |
+| Sparrow | YES | YES | -account, -address, -bip39, -hdkey,<br/>-output, -seed |
+| Passport | YES | YES | (-request/response with Casa for health check) | -account
+| CASA | YES | YES | -hdkey (-request/response for health check) |
+| SeedTool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
+| Keeper | YES | YES | -account |
+| Fully Noded | YES | YES | ? |
+| DIYBitcoin | YES | ? | ? |
+| Jade | YES | ? | ? |
+| Keystone | YES | ? | ? |
+| SeedSigner | YES | ? | ? |
+
+More info on PRs can be found in our [research papers](https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md) and in our [UR docs](https://github.com/BlockchainCommons/crypto-commons#urs).
+
 ## Discussions
 
 The best place to talk about Blockchain Commons and its projects is in our GitHub Discussions areas.
