@@ -24,7 +24,7 @@ _Please submit PRs if you are aware of different usages or to make corrections._
 | Fully Noded | YES | YES | ? |
 | DIYBitcoin | YES | ? | ? |
 | Jade | YES | ? | ? |
-| Keystone | YES | ? | ? |
+| Keystone | YES | ? | -psbt |
 | SeedSigner | YES | ? | ? |
 
 More info on PRs can be found in our [research papers](https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md) and in our [UR docs](https://github.com/BlockchainCommons/crypto-commons#urs).
