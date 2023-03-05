@@ -1,4 +1,18 @@
-> _(This is a transcript of the dCBOR Presentation from a meeting of the Gordian Development Community held on March 1, 2023. The archive of this presentation is available as a [YouTube Video](https://www.youtube.com/watch?v=NlJE8oF1B5M), an [MP3 Audio](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/dCBOR%20(Deterministic%20CBOR)%20Library%20from%20Blockchain%20Commons.mp3) and the [Slides PDF](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/2023-03-01-dCBOR-presentation.pdf) are available on GitHub. See our [meetings directory](https://github.com/BlockchainCommons/Gordian-Developer-Community/tree/master/meetings) for a complete list of meetings.)_
+# Deterministic CBOR (dCBOR) Presentation
+
+> TRANSCRIPT: _This is a excerpt of the dCBOR Presentation from a meeting of the Gordian Development Community held on March 1, 2023. The archive of this presentation is available as a [YouTube Video](https://www.youtube.com/watch?v=NlJE8oF1B5M), an [MP3 Audio](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/dCBOR%20(Deterministic%20CBOR)%20Library%20from%20Blockchain%20Commons.mp3) and the [Slides PDF](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/2023-03-01-dCBOR-presentation.pdf) are available on GitHub. See our [meetings directory](https://github.com/BlockchainCommons/Gordian-Developer-Community/tree/master/meetings) for a complete list of meetings.)_
+
+
+> ABSTRACT: _In this presentation, Wolf McNally from Blockchain Commons provides a comprehensive introduction to deterministic CBOR and libraries created to support it. These dCBOR libraries provide a solid foundation for creating unambiguous and easily verifiable CBOR-encoded data, making them ideal for use in many cryptographic applications._
+> 
+> _dCBOR is a subset of CBOR, a data serialization format that is particularly useful for cryptographic applications. The goal of dCBOR is to ensure that CBOR-encoded data is unambiguous and can be easily verified, making it ideal for use in applications such as digital signatures and other digital proofs._
+> 
+> _The Blockchain Commons dCBOR libraries have been created in Swift and Rust, and are designed to be compatible with each other. The libraries provide protocols and traits that allow developers to create CBOR-friendly structures that are easy to read and write. The libraries are also strict about what is compliant with the core deterministic encoding requirements, making it hard to write non-compliant dCBOR and an error to read non-compliant dCBOR._
+> 
+> _The presentation discusses some of the specific features of dCBOR, such as the encoding of numeric values, which uses the shortest possible serialization to ensure that there is only one way to encode a value. And careful encoding of maps, which are key-value pairs, must be encoded in a canonical order, and how the dCBOR libraries provide a special purpose map structure that keeps key-value pairs in a canonical sorted order._
+>
+> _The presentation ends demonstrating a dCBOR command-line diagnostic tool that leverages the dCBOR libraries, and allows developers to view and validate CBOR-encoded data. The tool can report validation warnings and throw errors if certain kinds of violations of validation occur, such as data running out before it can be deserialized or misordered map keys, or developers can also define their own errors if they wish._
+
 
 
 I'm Wolf McNally , I'm the lead researcher for Blockchain Commons, and in this video I'm going to talk about not just CBOR, but deterministic CBOR, and explain why we actually chose to create a couple of implementations that we hope will kind of set the stage for other people creating additional implementations for other languages.
