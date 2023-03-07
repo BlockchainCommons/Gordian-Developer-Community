@@ -27,7 +27,7 @@ Where it's not possible-- and there are a few edge cases where it's not as easy 
 
 All right, so what does the actual spec for CBOR say? The spec is RFC 8949, and section 4.2 specifically deals with deterministic encoded CBOR. So here's the-- I'll just read this verbatim:
 
-Some protocols (which is things built on CBOR), may want encoders to only emit CBOR in a particular deterministic format. Those protocols might also have the decoders check that their input is in that deterministic format when reading it back in. Those protocols are free to define what they mean by a deterministic format.
+> Some protocols (which is things built on CBOR), may want encoders to only emit CBOR in a particular deterministic format. Those protocols might also have the decoders check that their input is in that deterministic format when reading it back in. Those protocols are free to define what they mean by a deterministic format.
 
 My hackle start to rise at language like that. It's like, you shouldn't be free to determine these things. Continuing, and what encoders and decoders are expected to do. This section defines a set of restrictions. Okay, that's good. That can serve as the base for such a deterministic format.
 
