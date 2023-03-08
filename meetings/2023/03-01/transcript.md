@@ -284,4 +284,64 @@ So there is a special call that we had last week, which where we discussed some 
 
 ## Priorities
 
-We ought to close with priorities, obviously Blockchain Commons, we're working on finalizing the Envelope Rust library. Something that slowed us down was we originally had designed it for Blake3, but for a variety of reasons and talking with a lot of different people, we're gonna be using the SHA-256 as it's required the hash algorithm. This month, we're hoping to present envelope at the ITF. Last month, we presented at W3C. And then we wanna do more with the SSKR based crypto envelopes. We have some parties who are already doing SSKR, Proxy is implementing it. In fact, they will probably be talking next month about a constrained Java card version of SSKR that allows them to reconstruct the keys on a safe card rather than in the less safe iPhone. And then, you know, maybe we can get to the next step of taking this demo and actually having a little app that demonstrates it. So our next meeting is April 7th. I hope that you guys can all join us then. And I will open up to any closing questions with the group of people we have. And then we'll call it the day. I see some questions in the chat. Ken, do you have any early thoughts? I mean, we're trying to respond to Friday and it was a little quick. - Nothing that I wanna say right now really. I mean, like we have, I mentioned this like on Friday, but like we have some signing cases that I think I'll run by you, but I haven't got them all cleared up yet exactly which ones we wanna support. But like one of them might be, you know, for example, signing requests for things like Apple pass keys is one thing that we're considering using a future password version for. - Okay. Also, you know, is there some viability to generalize the health check? 'Cause that's a-- - Yeah, I don't see why not. I think they'd be open to it as well, but we'd have to just coordinate on that. And probably we'd have to support both standards for some period of time while people update. - That would be great. Aaron, so you can see there's a lot going on with URs and a lot of things that we can do with a variety of different companies and a lot of different companies that are involved in compatibility. And it isn't just wallet companies, it's companies like Casa and identity companies, et cetera. etc. Any comments or questions for the future of URs and maybe for your device? Yeah, currently we are building the next generation's device and I can share some details about that. First, we will fully support SSKR and second that for the new UR and QR types we have planned to fully support that. And third, we have previously used Rust for our development. So we are really excited to see the whole community going out that way. So that actually, there is quite a lot of information today, so I will digest that a little well and if I have any comments or questions I will send that in our signal channel. Great. So one thing to be certain on, obviously people can use the SSKR stuff that we developed last year, but I do encourage you since there really wasn't a large groundswell of support in various things to move up one more notch and do it as an envelope. The advantage of an envelope, you can do it pretty much straight now, just do the seed like the current standard does. But what Envelope then does is allow you to add other information. So in particular, one of the concerns around securing the seed is that in multi-sig, you need to have a descriptor. Without the descriptor, you're not backed up. You may need to have some metadata. It might be some transaction data that is private to the user that they want to move to their next wallet, and it's all gone when they switch. It might be lightning channel information or a key that's used or other information that's private. And your future, if you're using the envelope version of SSKR, which is a little larger than the raw SSKR, the advantage is that you're future-proofing yourself to be able to restore a lot of other different types of things. The only advantage of using the original SSKR thing is it is designed to be small. And if that's of vital importance, we can talk with you about how to do that very efficiently and some ideas about variations there. But what we're discovering is people aren't putting stuff on metal, they're buying metal and then not stamping it. Like they, you know, They're not necessarily doing the hour of work that is necessary to do this type of stuff. So we've got, if they're not doing it, then we really need to do things better. And I think the collaborative seed recovery and the different efforts in that direction will address a broader set of users, allow us to have much greater safety and no single points of failure or compromise. And so, but I really want you to do SSKR. - Yeah, gotcha. - I'm glad to hear you're working and Russ will be doing more. I think, and I think Ken said that, they're doing more with Russ too. So let's make this the best community for sort of the wallet side of these choices. - Sure. Any last comments before we close for the day? Well, thank you again, everybody, for joining us. Again, join us in a month, and we'll have more for you. And use the Signal channel. Please subscribe to the announcements list so we can tell you about any changes, for instance, to be more friendly to the European time zone or alternate or whatever. So also, if you're using Google Calendar, I can add you to the Google Calendar for these meetings. And it'll automatically be changed if there's anything that happens. So again, thank you very much, and have a great evening. Thanks, Christopher. Thanks, both. Thank you. Thank you. Bye. Thank you, everybody. Bye. Thank you. Bye. [BLANK_AUDIO]
+We ought to close with priorities.
+
+Obviously Blockchain Commons, we're working on finalizing the Envelope Rust library. Something that slowed us down was we originally had designed it for Blake3, but for a variety of reasons and talking with a lot of different people, we're gonna be using the SHA-256 as it's required the hash algorithm. This month, we're hoping to present envelope at the ITF. Last month, we presented at W3C. 
+
+And then we wanna do more with the SSKR based crypto envelopes. We have some parties who are already doing SSKR, Proxy is implementing it. In fact, they will probably be talking next month about a constrained Java card version of SSKR that allows them to reconstruct the keys on a safe card rather than in the less safe iPhone. And then, you know, maybe we can get to the next step of taking this demo and actually having a little app that demonstrates it. 
+
+So our next meeting is April 7th. I hope that you guys can all join us then. 
+
+And I will open up to any closing questions with the group of people we have. And then we'll call it the day. 
+
+I see some questions in the chat.
+
+Ken, do you have any early thoughts? I mean, we're trying to respond to Friday and it was a little quick.
+
+Nothing that I wanna say right now really. I mean, like we have, I mentioned this like on Friday, but like we have some signing cases that I think I'll run by you, but I haven't got them all cleared up yet exactly which ones we wanna support. But like one of them might be, you know, for example, signing requests for things like Apple pass keys is one thing that we're considering using a future password version for.
+
+Okay. Also, you know, is there some viability to generalize the health check? 'Cause that's a-- 
+
+Yeah, I don't see why not. I think they'd be open to it as well, but we'd have to just coordinate on that. And probably we'd have to support both standards for some period of time while people update.
+
+That would be great. 
+
+Aaron, so you can see there's a lot going on with URs and a lot of things that we can do with a variety of different companies and a lot of different companies that are involved in compatibility. And it isn't just wallet companies, it's companies like Casa and identity companies, et cetera. etc. 
+
+Any comments or questions for the future of URs and maybe for your device? 
+
+Yeah, currently we are building the next generation's device and I can share some details about that. First, we will fully support SSKR and second that for the new UR and QR types we have planned to fully support that. And third, we have previously used Rust for our development. So we are really excited to see the whole community going out that way. So that actually, there is quite a lot of information today, so I will digest that a little well and if I have any comments or questions I will send that in our signal channel. 
+
+Great. 
+
+So one thing to be certain on, obviously people can use the SSKR stuff that we developed last year, but I do encourage you since there really wasn't a large groundswell of support in various things to move up one more notch and do it as an envelope. The advantage of an envelope, you can do it pretty much straight now, just do the seed like the current standard does. But what Envelope then does is allow you to add other information. So in particular, one of the concerns around securing the seed is that in multi-sig, you need to have a descriptor. Without the descriptor, you're not backed up. You may need to have some metadata. It might be some transaction data that is private to the user that they want to move to their next wallet, and it's all gone when they switch. It might be lightning channel information or a key that's used or other information that's private. And your future, if you're using the envelope version of SSKR, which is a little larger than the raw SSKR, the advantage is that you're future-proofing yourself to be able to restore a lot of other different types of things. The only advantage of using the original SSKR thing is it is designed to be small. And if that's of vital importance, we can talk with you about how to do that very efficiently and some ideas about variations there. 
+
+But what we're discovering is people aren't putting stuff on metal, they're buying metal and then not stamping it. Like they, you know, They're not necessarily doing the hour of work that is necessary to do this type of stuff. So we've got, if they're not doing it, then we really need to do things better. And I think the collaborative seed recovery and the different efforts in that direction will address a broader set of users, allow us to have much greater safety and no single points of failure or compromise. And so, but I really want you to do SSKR.
+
+Yeah, gotcha.
+
+I'm glad to hear you're working and Russ will be doing more. I think, and I think Ken said that, they're doing more with Russ too. So let's make this the best community for sort of the wallet side of these choices.
+
+Sure.
+
+Any last comments before we close for the day? 
+
+Well, thank you again, everybody, for joining us. Again, join us in a month, and we'll have more for you. And use the Signal channel. Please subscribe to the announcements list so we can tell you about any changes, for instance, to be more friendly to the European time zone or alternate or whatever. So also, if you're using Google Calendar, I can add you to the Google Calendar for these meetings. And it'll automatically be changed if there's anything that happens. So again, thank you very much, and have a great evening. 
+
+Thanks, Christopher. 
+
+Thanks, both. 
+
+Thank you. 
+
+Thank you. 
+
+Bye. 
+
+Thank you, everybody. 
+
+Bye. 
+
+Thank you. 
+
+Bye.
