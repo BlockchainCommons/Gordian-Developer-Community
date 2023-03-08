@@ -1,6 +1,6 @@
 # Deterministic CBOR (dCBOR) Presentation
 
-> TRANSCRIPT: _This is a excerpt of the dCBOR Presentation from a meeting of the Gordian Development Community held on March 1, 2023. The archive of this presentation is available as a [YouTube Video](https://www.youtube.com/watch?v=NlJE8oF1B5M), an [MP3 Audio](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/dCBOR%20(Deterministic%20CBOR)%20Library%20from%20Blockchain%20Commons.mp3) and the [Slides PDF](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/2023-03-01-dCBOR-presentation.pdf) are available on GitHub. See our [meetings directory](https://github.com/BlockchainCommons/Gordian-Developer-Community/tree/master/meetings) for a complete list of meetings.)_
+> TRANSCRIPT: _This is a excerpt of the dCBOR Presentation from a meeting of the Gordian Development Community held on March 1, 2023. The archive of this presentation is available as a [YouTube Video](https://www.youtube.com/watch?v=NlJE8oF1B5M), an [MP3 Audio](audio-dcbor.mp3) and the [Slides PDF](presentation-dcbor.pdf) are available on GitHub. See our [meetings directory](../../meetings) for a complete list of meetings.)_
 
 
 > ABSTRACT: _In this presentation, Wolf McNally from Blockchain Commons provides a comprehensive introduction to deterministic CBOR and libraries created to support it. These dCBOR libraries provide a solid foundation for creating unambiguous and easily verifiable CBOR-encoded data, making them ideal for use in many cryptographic applications._
