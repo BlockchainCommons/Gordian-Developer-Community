@@ -8,6 +8,10 @@
 
 **Gordian Developer Community** is a community of cryptocurrency & identity wallet developers, sharing best practices for paritioned interoperability among multiple vendors on multiple platforms. These best practices include support for hot, cold and multisig cryptographic wallets, research & proposals for data formats and protocols, usage of gaps such as airgaps and torgaps, security and UX for multisig work flows, and other key management and signing issues and topics, particularly those that support the [Gordian Principles](https://github.com/BlockchainCommons/Gordian#gordian-principles) of independence, privacy, resilience, and openness.
 
+## Meetings
+
+Much of our collaborative work is conducted through Meetings. Please sign up for our [Gordian Developer lists](https://www.blockchaincommons.com/subscribe.html) to be informed of when they occur and please see our [meetings page](/meetings/README.md) for info from meetings to date.
+
 ## URs
 
 One of our most successful interoperable specifications to date has been `ur:`. Following is a table of usage. 
