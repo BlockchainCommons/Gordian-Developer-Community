@@ -1,4 +1,4 @@
-# Gordian Developer Community - Meeting 2023-02-024 on Requirements Signing with URs
+# Gordian Developer Community - Meeting 2023-02-24 on Requirements Signing with URs
 
 ## Summary
 
