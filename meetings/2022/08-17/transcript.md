@@ -23,9 +23,9 @@ If nobody can see it, there's no way to make it real.
 
 So it's a way of future-proofing an MVP.
 
-So we've kind of done this with some cryptographic choices for the MVA for Gordian.
+So we've kind of done this with some cryptographic choices for the MVA for gordian.
 
-One of the things that we're doing is we're trying to combine carefully chosen cryptographic things in groups, which is very similar to Cypher Suites in TLS.
+one of the things that we're doing is we're trying to combine carefully chosen cryptographic things in groups, which is very similar to Cypher Suites in TLS.
 
 If you know my work in there, that's a lot of the reason why we did it there.
 
@@ -33,7 +33,7 @@ It's not a kitchen sink where you can arbitrarily choose this hash algorithm and
 
 Initially, we're gonna use these choices for our test code for an envelope CLI app and Swift that just allows us to play around in the territory.
 
-It's not intended for shipping and the architecture may change, but more importantly allows us to go to Ross, Radically Open Security or other reviewers to review the architecture to make sure we didn't do any foot guns.
+It's not intended for shipping and the architecture may change, but more importantly allows us to go to ROS (Radically Open Security) or other reviewers to review the architecture to make sure we didn't do any foot guns.
 
 I mean, there was a couple of places where we're doing some stuff that it's like, there might be something there that we weren't careful enough about.
 
@@ -227,7 +227,7 @@ The couple of advantages of it, the public keys are not embedded in signatures, 
 
 The signatures are 512 bits, plus you need the, you know, in order to verify it, you need the X-only public key.
 
-But it enables for the future frost quorums, adapter signatures, and then this is what will be added in the crossbar family chips and hopefully some others, Tropic Square and that other one that was discussed at the last Silicon Salon.
+But it enables for the future FROST quorums, adapter signatures, and then this is what will be added in the crossbar family chips and hopefully some others, Tropic Square and that other one that was discussed at the last Silicon Salon.
 
 There is a potential risk, which is X-only signatures might buy this for some advanced protocols.
 
@@ -354,6 +354,3 @@ Okay.
 Well, that was definitely part of the design.
 
 We wanted it to work on that class.
-
-.
-
