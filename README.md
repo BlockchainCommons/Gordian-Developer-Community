@@ -55,13 +55,13 @@ _Please submit PRs if you are aware of different usages or to make corrections._
 | DIYBitcoin | DIY&nbsp;Hardware&nbsp;Wallet | YES | ? | ? |
 | Denton&nbsp;Development| Fully Noded | YES | YES | ? |
 | Blockstream | Jade | YES | ? | ? |
-| Blockchain&nbsp;Commons | KeyTool&nbsp;CLI | NO | YES | -hdkey, -request, -response, -seed |
+| Blockchain&nbsp;Commons | keytool-cli | NO | YES | -hdkey, -request, -response, -seed |
 | Keeper | Keeper&nbsp;Wallet | YES | YES | -account |
 | Keystone | Keystone&nbsp;Essential/Pro | YES | YES | ? |
 | Foundation | Passport | YES | YES | (-request/response with Casa for health check) | -account
 | Meteor Software| SeedSigner | YES | ? | ? |
-| Blockchain&nbsp;Commons | SeedTool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
-| Blockchain&nbsp;Commons | SeedTool&nbsp;CLI | NO | NO | -seed, -sskr |
+| Blockchain&nbsp;Commons | Seed Tool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
+| Blockchain&nbsp;Commons | seedtool-cli | NO | NO | -seed, -sskr |
 | Craig Raw | Sparrow | YES | YES | -account, -address, -bip39, -hdkey,<br/>-output, -seed |
 
 More info on PRs can be found in our [research papers](https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md) and in our [UR docs](https://github.com/BlockchainCommons/crypto-commons#urs).
