@@ -22,13 +22,13 @@ _Please submit PRs if you are aware of different usages or to make corrections._
 | ---------- | ---- | --------- | -------------- | --------------------------------------------------------- | --- |
 | Casa | Wallet | YES | YES | -hdkey (-request/response for health check) |
 | DIYBitcoin | Hardware&nbsp;Wallet | YES | ? | ? |
-| Denton Development| Fully Noded | YES | YES | ? |
+| Denton&nbsp;Development| Fully Noded | YES | YES | ? |
 | Blockstream | Jade | YES | ? | ? |
 | Keeper | Wallet | YES | YES | -account |
 | Keystone | Essential/Pro | YES | YES | ? |
 | Foundation | Passport | YES | YES | (-request/response with Casa for health check) | -account
 | Meteor Software| SeedSigner | YES | ? | ? |
-| Blockchain Commons | SeedTool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
+| Blockchain&nbsp;Commons | SeedTool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
 | Craig Raw | Sparrow | YES | YES | -account, -address, -bip39, -hdkey,<br/>-output, -seed |
 
 More info on PRs can be found in our [research papers](https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md) and in our [UR docs](https://github.com/BlockchainCommons/crypto-commons#urs).
