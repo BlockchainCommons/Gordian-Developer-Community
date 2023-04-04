@@ -18,18 +18,18 @@ One of our most successful interoperable specifications to date has been `ur:`. 
 
 _Please submit PRs if you are aware of different usages or to make corrections._
 
-| Wallet | Animated PSBT | ur:crypto-psbt | ur:crypto-* | Future |
+| Publisher | Wallet | Animated PSBT | ur:crypto-psbt | ur:crypto-* | Future |
 | ---------- | ------------- | -------------- | --------------------------------------------------------- | --- |
-| Sparrow | YES | YES | -account, -address, -bip39, -hdkey,<br/>-output, -seed |
-| Passport | YES | YES | (-request/response with Casa for health check) | -account
-| CASA | YES | YES | -hdkey (-request/response for health check) |
-| SeedTool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
-| Keeper | YES | YES | -account |
-| Fully Noded | YES | YES | ? |
-| DIYBitcoin | YES | ? | ? |
-| Jade | YES | ? | ? |
-| Keystone | YES | YES | ? |
-| SeedSigner | YES | ? | ? |
+| Casa | Wallet | YES | YES | -hdkey (-request/response for health check) |
+| DIYBitcoin | Hardware Wallet | YES | ? | ? |
+| Denton Development| Fully Noded | YES | YES | ? |
+| Blockstream | Jade | YES | ? | ? |
+| Keeper | Wallet | YES | YES | -account |
+| Keystone | Essential/Pro | YES | YES | ? |
+| Foundation | Passport | YES | YES | (-request/response with Casa for health check) | -account
+| Meteor Software| SeedSigner | YES | ? | ? |
+| Blockchain Commons | SeedTool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
+| Craig Raw | Sparrow | YES | YES | -account, -address, -bip39, -hdkey,<br/>-output, -seed |
 
 More info on PRs can be found in our [research papers](https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md) and in our [UR docs](https://github.com/BlockchainCommons/crypto-commons#urs).
 
