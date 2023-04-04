@@ -41,6 +41,10 @@ The following is a general listing of topics in the two repos, but visiting the 
    * [URs](https://github.com/BlockchainCommons/crypto-commons/blob/master/Docs/README.md#uniform-resources-urs)
    * [Gordian Reference Libraries](https://github.com/BlockchainCommons/crypto-commons#gordian-reference-libraries)
    
+**Research:**
+
+   * [Blockchain Commons Research Specifications (BCRs)](https://github.com/BlockchainCommons/Research/blob/master/README.md)
+   
 ## URs
 
 One of our most successful interoperable specifications to date has been `ur:`. Following is a table of usage. 
