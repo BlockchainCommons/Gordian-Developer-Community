@@ -12,6 +12,35 @@
 
 Much of our collaborative work is conducted through Meetings. Please sign up for our [Gordian Developer lists](https://www.blockchaincommons.com/subscribe.html) to be informed of when they occur and please see our [meetings page](/meetings/README.md) for info from meetings to date.
 
+## Technologies
+
+Blockchain Common's Gordian technologies include architectural designs, apps, and specifications. The architectural designs, apps, and the general overview of the system can be found in the [Gordian repo](https://github.com/BlockchainCommons/Gordian/blob/master/README.md) while developer-level docs can be found in the [Crypto Commons repo](https://github.com/BlockchainCommons/crypto-commons/blob/master/README.md).
+
+The following is a general listing of topics in the two repos, but visiting the individual repos' READMEs can provide more up-to-date information
+
+**Gordian Repo:**
+
+   * [Gordian Overview](https://github.com/BlockchainCommons/Gordian/blob/master/README.md)
+   * [Gordian Principles](https://github.com/BlockchainCommons/Gordian/blob/master/README.md#gordian-principles)
+   * [Gordian Architecture](https://github.com/BlockchainCommons/Gordian/blob/master/Architecture/README.md)
+      * [Gordian Architecture Roles](https://github.com/BlockchainCommons/Gordian/blob/master/Architecture/Roles.md)
+      * [CBOR](https://www.blockchaincommons.com/introduction/Why-CBOR/)
+      * [CKM](https://github.com/BlockchainCommons/Gordian/blob/master/CKM/README.md)
+         * [Use Cases](https://hackmd.io/ZbRiwvUfQSy-1RKM15bM8Q#Secret-Sharing-Use-Cases)
+      * [CSR](https://github.com/BlockchainCommons/Gordian/blob/master/CSR/README.md)
+         * [Use Cases](https://hackmd.io/ZbRiwvUfQSy-1RKM15bM8Q#CSR-Focused-Use-Cases)
+      * [Gordian Envelope](https://www.blockchaincommons.com/introduction/Envelope-Intro/)
+         * [Use Cases](https://github.com/BlockchainCommons/Gordian/blob/master/Envelope/Use-Cases/README.md)
+   * [Gordian Reference Apps](https://github.com/BlockchainCommons/Gordian/blob/master/Architecture/Apps.md)
+   * [Gordian Lexicon](https://github.com/BlockchainCommons/Gordian/blob/master/README.md#gordian-lexicon)
+   
+**Crypto Commons Repo:**
+
+   * [Technology Overview](https://github.com/BlockchainCommons/crypto-commons/blob/master/Docs/README.md#technology-overview-video)
+   * [SSKR](https://github.com/BlockchainCommons/crypto-commons/blob/master/Docs/README.md#sharded-secret-key-reconstruction-sskr)
+   * [URs](https://github.com/BlockchainCommons/crypto-commons/blob/master/Docs/README.md#uniform-resources-urs)
+   * [Gordian Reference Libraries](https://github.com/BlockchainCommons/crypto-commons#gordian-reference-libraries)
+   
 ## URs
 
 One of our most successful interoperable specifications to date has been `ur:`. Following is a table of usage. 
