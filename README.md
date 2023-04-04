@@ -21,7 +21,7 @@ _Please submit PRs if you are aware of different usages or to make corrections._
 | Publisher | Wallet | Animated PSBT | ur:crypto-psbt | ur:crypto-* | Future |
 | ---------- | ---- | --------- | -------------- | --------------------------------------------------------- | --- |
 | Casa | Wallet | YES | YES | -hdkey (-request/response for health check) |
-| DIYBitcoin | Hardware Wallet | YES | ? | ? |
+| DIYBitcoin | Hardware&nbsp;Wallet | YES | ? | ? |
 | Denton Development| Fully Noded | YES | YES | ? |
 | Blockstream | Jade | YES | ? | ? |
 | Keeper | Wallet | YES | YES | -account |
