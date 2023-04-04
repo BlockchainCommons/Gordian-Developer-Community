@@ -14,9 +14,9 @@ Much of our collaborative work is conducted through Meetings. Please sign up for
 
 ## Technologies
 
-Blockchain Common's Gordian technologies include architectural designs, apps, and specifications. The architectural designs, apps, and the general overview of the system can be found in the [Gordian repo](https://github.com/BlockchainCommons/Gordian/blob/master/README.md) while developer-level docs can be found in the [Crypto Commons repo](https://github.com/BlockchainCommons/crypto-commons/blob/master/README.md).
+Blockchain Common's Gordian technologies include architectural designs, apps, and specifications. The architectural designs, apps, and the general overview of the system can be found in the [Gordian repo](https://github.com/BlockchainCommons/Gordian/blob/master/README.md) while developer-level docs can be found in the [Crypto Commons repo](https://github.com/BlockchainCommons/crypto-commons/blob/master/README.md). Finally, original research specifications can be found in the [Research repo](https://github.com/BlockchainCommons/Research/blob/master/README.md).
 
-The following is a general listing of topics in the two repos, but visiting the individual repos' READMEs can provide more up-to-date information
+The following is a general listing of topics in the three repos, but visiting the individual repos' READMEs can provide more up-to-date information
 
 **Gordian Repo:**
 
