@@ -20,12 +20,14 @@ _Please submit PRs if you are aware of different usages or to make corrections._
 
 | Publisher | Wallet | Animated PSBT | ur:crypto-psbt | ur:crypto-* | Future |
 | ---------- | ---- | --------- | -------------- | --------------------------------------------------------- | --- |
-| Casa | Wallet | YES | YES | -hdkey (-request/response for health check) |
-| DIYBitcoin | Hardware&nbsp;Wallet | YES | ? | ? |
+| BlueWallet | BlueWallet | ? | ? | bc-urv1 |
+| Casa | Casa&nbsp;Wallet | YES | YES | -hdkey (-request/response for health check) |
+| Cobo | Cobo&Wallet; | ? | ? | bc-urv1 |
+| DIYBitcoin | DIY&nbsp;Hardware&nbsp;Wallet | YES | ? | ? |
 | Denton&nbsp;Development| Fully Noded | YES | YES | ? |
 | Blockstream | Jade | YES | ? | ? |
-| Keeper | Wallet | YES | YES | -account |
-| Keystone | Essential/Pro | YES | YES | ? |
+| Keeper | Keeper&nbsp;Wallet | YES | YES | -account |
+| Keystone | Keystone&nbsp;Essential/Pro | YES | YES | ? |
 | Foundation | Passport | YES | YES | (-request/response with Casa for health check) | -account
 | Meteor Software| SeedSigner | YES | ? | ? |
 | Blockchain&nbsp;Commons | SeedTool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
