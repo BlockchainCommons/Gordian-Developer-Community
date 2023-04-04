@@ -22,7 +22,7 @@ _Please submit PRs if you are aware of different usages or to make corrections._
 | ---------- | ---- | --------- | -------------- | --------------------------------------------------------- | --- |
 | BlueWallet | BlueWallet | ? | ? | bc-urv1 |
 | Casa | Casa&nbsp;Wallet | YES | YES | -hdkey (-request/response for health check) |
-| Cobo | Cobo&Wallet; | ? | ? | bc-urv1 |
+| Cobo | Cobo&nbsp;Wallet | ? | ? | bc-urv1 |
 | DIYBitcoin | DIY&nbsp;Hardware&nbsp;Wallet | YES | ? | ? |
 | Denton&nbsp;Development| Fully Noded | YES | YES | ? |
 | Blockstream | Jade | YES | ? | ? |
