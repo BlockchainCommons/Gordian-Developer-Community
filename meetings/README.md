@@ -20,7 +20,7 @@ _This directory contains artifacts of meetings held on Blockchain Commons topics
 
 ## Volunteers Needed
 
-We have more videos and presentations on YouTube that need to be archive:
+We have more videos and presentations on YouTube that need to be archived:
 * Add them to list by date
 * Create summary
 * Export audio and recompress mp3 -v8 (max. 25MB allowed on GitHub)
