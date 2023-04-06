@@ -1,10 +1,10 @@
 # Blockchain Commons Meetings
 
-_This directory contains artifacts of meetings held on Blockchain Commons topics with various principals._
+_This directory contains artifacts of meetings held on Blockchain Commons topics with various parties._
 
 ### YouTube Archives
 
-* A YouTube Playlist of [archives of previous meetings](https://www.youtube.com/playlist?list=PLCkrqxOY1Fbp-P1Yv-7gmu75i2QS2Z6vk). Most recent meeting at top (i.e. reverse chronological order)
+* A YouTube Playlist of [archives of meetings](https://www.youtube.com/playlist?list=PLCkrqxOY1Fbp-P1Yv-7gmu75i2QS2Z6vk) of the [Gordian Developer Community](/). Most recent meeting at top (i.e. reverse chronological order)
 * A YouTube Playlist of presentations on [Gordian Envelope](https://www.youtube.com/playlist?list=PLCkrqxOY1FbooYwJ7ZhpJ_QQk8Az1aCnG)
 
 ### Detailed list of meeting summaries, with archives of video, mp3 and transcripts.
