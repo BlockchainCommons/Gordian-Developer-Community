@@ -4,11 +4,11 @@ This is a transcript of the meeting of the Gordian Development Community held on
 
 > ABSTRACT: _At this regular Wallet Developer meeting (held the first Wednesday of every month), Blockchain Commons discussed promoting success of QR PSBT interop, shared observation from presenting Envelope at IETF Dispatch, offered update on CBOR/UR and evolving Internet Drafts, and briefly talked about legislative work in Wyoming. The community discussed QuickConnect's next generation, a javacard version of SSKR, and plans for the next monthly call in coordination with Silicon Salon 4. More lively discussion followed including about BIP 85._
 
-> SUMMARY: See https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/108 for a summary. What follows is a rough
+> SUMMARY: See https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/108 for a summary.
 
 ## Raw Transcript
 
-> (computer-generated with some edits) transcript.
+> (What follows is a rough computer-generated transcript with some minor edits. VOLUNTEERS NEEDED).
 
 ### Introduction
 
