@@ -5,7 +5,7 @@ _This directory contains artifacts of meetings held on Blockchain Commons topics
 ### YouTube Archives
 
 * A YouTube Playlist of [archives of previous meetings](https://www.youtube.com/playlist?list=PLCkrqxOY1Fbp-P1Yv-7gmu75i2QS2Z6vk). Most recent meeting at top (i.e. reverse chronological order)
-* A YouTube Playlist of presentations on [Gordian Eveleop]*https://www.youtube.com/playlist?list=PLCkrqxOY1FbooYwJ7ZhpJ_QQk8Az1aCnG)
+* A YouTube Playlist of presentations on [Gordian Envelope](https://www.youtube.com/playlist?list=PLCkrqxOY1FbooYwJ7ZhpJ_QQk8Az1aCnG)
 
 ## Detailed list of meeting summaries, with archives of video, mp3 and transcripts.
 
