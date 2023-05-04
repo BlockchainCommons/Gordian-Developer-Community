@@ -67,6 +67,7 @@ _Please submit PRs if you are aware of different usages or to make corrections._
 | Blockchain&nbsp;Commons | Seed Tool | YES | YES | -account, -address, -bip39, -hdkey<br/>-output, -seed, -sskr |
 | Blockchain&nbsp;Commons | seedtool-cli | NO | NO | -seed, -sskr |
 | Craig Raw | Sparrow | YES | YES | -account, -address, -bip39, -hdkey,<br/>-output, -seed |
+| SeedHammer | SeedHammer | NO | NO | -output |
 
 More info on PRs can be found in our [research papers](https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md) and in our [UR docs](https://github.com/BlockchainCommons/crypto-commons#urs).
 
