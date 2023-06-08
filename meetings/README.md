@@ -11,7 +11,7 @@ _This directory contains artifacts of meetings held on Blockchain Commons topics
 
 | Date | Topic | Summary | Presentation(s) | Video | Audio | Transcript |
 |------|-------|---------|-----------------|-------|-------|----------------|
-| 2023-06-07 | **June Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/112) |
+| 2023-06-07 | **June Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/112) | [Slides PDF](2023/06-07/presentation.pdf) |
 | 2023-05-08 | **VC-ED Presentation** | [Article](https://www.blockchaincommons.com/articles/Dangerous-Educational-Credentials/) | [Slides PDF](https://www.blockchaincommons.com/assets/pdfs/digital-credentials-next-step.pdf) | [YouTube Video](https://www.youtube.com/watch?v=0YvyhdwvvB0) | | |
 | 2023-05-03 | **Silicon Salon IV** | [Overview](https://www.siliconsalon.info/salon4/) | [Presentations](https://www.siliconsalon.info/salon4/presentations/) |
 | 2023-04-05 | **April Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/108) | [Slides PDF](2023/04-05/presentation.pdf) | [YouTube Video](https://www.youtube.com/watch?v=EyYiwYpui5Q) | [MP3 Audio](2023/04-05/audio.mp3?raw=true) | [Raw](2023/04-05/transcript.md) |
