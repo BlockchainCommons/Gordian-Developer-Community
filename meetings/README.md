@@ -11,7 +11,7 @@ _This directory contains artifacts of meetings held on Blockchain Commons topics
 
 | Date | Topic | Summary | Presentation(s) | Video | Audio | Transcript |
 |------|-------|---------|-----------------|-------|-------|----------------|
-| 2023-07-05 | **July Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/114) | 
+| 2023-07-05 | **July Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/114) | [Slides PDF](2023/07-05/presentation.pdf) |
 | 2023-06-07 | **June Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/112) | [Slides PDF](2023/06-07/presentation.pdf) | [Seedhammer](https://www.youtube.com/watch?v=fXP9LjnLAfo), [Rust Conversion](https://www.youtube.com/watch?v=KvO1GRRu_ow) | | [Seedhammer Raw](2023/06-07/seedhammer-transcript.md), [Rust Raw](2023/06-07/rust-transcript.md) |
 | 2023-05-08 | **VC-ED Presentation** | [Article](https://www.blockchaincommons.com/articles/Dangerous-Educational-Credentials/) | [Slides PDF](https://www.blockchaincommons.com/assets/pdfs/digital-credentials-next-step.pdf) | [YouTube Video](https://www.youtube.com/watch?v=0YvyhdwvvB0) | | [Raw](2023/05-08/transcript.md) |
 | 2023-05-03 | **Silicon Salon IV** | [Overview](https://www.siliconsalon.info/salon4/) | [Presentations](https://www.siliconsalon.info/salon4/presentations/) |
