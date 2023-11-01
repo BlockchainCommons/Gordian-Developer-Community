@@ -11,6 +11,7 @@ _This directory contains artifacts of meetings held on Blockchain Commons topics
 
 | Date | Topic | Summary | Presentation(s) | Video | Audio | Transcript |
 |------|-------|---------|-----------------|-------|-------|----------------|
+| 2023-11-01 | **November Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/120)
 | 2023-09-06 | **September Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/118) | [Slides PDF](2023/09-06/presentation.pdf) | [YouTube Video](https://www.youtube.com/watch?v=KlauBKUA9xw) | | [RAW](2023/09-06/transcript.md)
 | 2023-07-05 | **July Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/114) | [Slides PDF](2023/07-05/presentation.pdf) | [YouTube Video](https://www.youtube.com/watch?v=9fyICk0lwL0) | | [Raw](2023/07-05/transcript.md)
 | 2023-06-07 | **June Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/112) | [Slides PDF](2023/06-07/presentation.pdf) | [Seedhammer](https://www.youtube.com/watch?v=fXP9LjnLAfo), [Rust Conversion](https://www.youtube.com/watch?v=KvO1GRRu_ow) | | [Seedhammer Raw](2023/06-07/seedhammer-transcript.md), [Rust Raw](2023/06-07/rust-transcript.md) | 
