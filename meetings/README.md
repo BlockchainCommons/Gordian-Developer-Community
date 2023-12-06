@@ -11,6 +11,7 @@ _This directory contains artifacts of meetings held on Blockchain Commons topics
 
 | Date | Topic | Summary | Presentation(s) | Video | Audio | Transcript |
 |------|-------|---------|-----------------|-------|-------|----------------|
+| 2023-12-05 | **December Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/123) | 
 | 2023-11-08 | **FROST Implementer's Round Table I** | [Overview](https://developer.blockchaincommons.com/frost/meeting1/), [Summary](https://developer.blockchaincommons.com/frost/meeting1/summary/) | | [YouTube Video](https://www.youtube.com/watch?v=U9MvNuyCpE4) | | [Raw Transcript](https://developer.blockchaincommons.com/frost/meeting1/transcript/) |
 | 2023-11-01 | **November Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/120) | [Slides PDF](2023/11-01/presentation.pdf) | [YouTube Video](https://www.youtube.com/watch?v=gid528Ivxww) | | [Raw](2023/11-01/transcript.md)
 | 2023-09-06 | **September Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/118) | [Slides PDF](2023/09-06/presentation.pdf) | [YouTube Video](https://www.youtube.com/watch?v=KlauBKUA9xw) | | 
