@@ -15,4 +15,6 @@ To get all the latest info on Blockchain Commons events of this sort, you can al
 
 https://www.blockchaincommons.com/subscribe/
 
-[Download .ics Calendar Reminder](https://developer.blockchaincommons.com/assets/ics/frost-meeting-202404.ics). Then click on downloaded file to add to your calendar.
+---
+
+*[Download .ics Calendar Reminder](https://developer.blockchaincommons.com/assets/ics/frost-meeting-202404.ics). Then click on downloaded file to add to your calendar.*
