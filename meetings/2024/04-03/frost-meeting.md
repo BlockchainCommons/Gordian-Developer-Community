@@ -4,7 +4,7 @@ If you'd like to learn more about FROST, the next-generation Schnorr-based techn
 
 * WHAT? Gordian / FROST Joint Meeting
 * WHEN? Apr 3, 2024 10:00 - 11:30 AM Pacific Time (1pm ET, 7pm CET)
-* WHERE? URL: https://us02web.zoom.us/j/85940103726?pwd=NUk1SExTSDZId09KcW1sMXdUTDlNQT09
+* WHERE? https://us02web.zoom.us/j/85940103726?pwd=NUk1SExTSDZId09KcW1sMXdUTDlNQT09
 * MOBILE? +12532158782,,85940103726#,,,,*372567# US (Tacoma)
 
 Our presenter will be Jesse Posner, who is Senior Blockchain Engineer at Block and working on the [secp/ZKP FROST](https://github.com/BlockstreamResearch/secp256k1-zkp/pull/138).
@@ -14,3 +14,5 @@ We'll take a look at what threshold signatures are, how they look just like sing
 To get all the latest info on Blockchain Commons events of this sort, you can also sign up for our Gordian announcement list or Signal channel:
 
 https://www.blockchaincommons.com/subscribe/
+
+[Download .ics Calendar Reminder](frost-meeting.ics)
