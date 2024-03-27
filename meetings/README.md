@@ -11,6 +11,7 @@ _This directory contains artifacts of meetings held on Blockchain Commons topics
 
 | Date | Topic | Summary | Presentation(s) | Video | Audio | Transcript |
 |------|-------|---------|-----------------|-------|-------|----------------|
+| 2024-03-27 | **Foremembrance 2024 Memorial** | | [Presentation](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/2024/03-27/foremembrance-presentation.pdf) | [YouTube Video](https://www.youtube.com/watch?v=R9KuIlAg4wg)
 | 2024-03-18 | **IETF 119 Hashed Data Elision Presentation** | | [Presentation](https://github.com/BlockchainCommons/Gordian-Developer-Community/blob/master/meetings/2024/03-18/presentation.pdf)| [YouTube Video](https://www.youtube.com/watch?v=soI-j6LF4Xg) |
 | 2024-03-06 | **March Gordian Developer Community Meeting** | | | [Slides PDF](2024/03-06/presentation.pdf), [Request & Response PDF](2024/03-06/presentation-rr.pdf) 
 | 2024-02-07 | **February Gordian Developer Community Meeting** | [Summary](https://github.com/BlockchainCommons/Gordian-Developer-Community/discussions/125) | [Slides PDF](2024/02-07/presentation.pdf)| [YouTube Video](https://www.youtube.com/watch?v=mkzCKpWvXXE&t=4s) | | [Raw](2024/02-07/transcript.md)
