@@ -9,6 +9,7 @@ In December we'll be offering a special set of presentations for wallet develope
 
 We've got three presentations planned so far and hope to add at least one more:
 
+* INTRODUCTION TO FROST. What is FROST? Why would you want to use it? We'll offer our own thoughts.
 * STACK WALLET. Stack is the first production wallet to successfully integrate FROST, including features such as changing and reconstructing thresholds. They'll discuss how they did so.
 * ZCASH FROST UniFFI SDK. If you want to implement FROST, another option is the UniFFI SDK, which converts the Zcash Rust FROST system into GoLang, Kotlin, and Swift.
 * FROST FEDERATIONS. There are lots of uses for FROST! Our final presentation will talk about its use to manage a federation with a mining pool as a case study.
