@@ -1,4 +1,4 @@
-# Blockchain Commons Quantum & More meeting
+# Blockchain Commons Post-Quantum Cryptography & More Meeting
 
 Blockchain Commons' March Developers meeting is going to be about some of our most innovative topics ever, including post-Quantum cryptography, upcoming deployment, and more!
 
