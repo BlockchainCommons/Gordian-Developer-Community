@@ -3,7 +3,9 @@
 Blockchain Commons' March Developers meeting is going to be about some of our most innovative topics ever, including post-Quantum cryptography, upcoming deployment, and more!
 
 WHAT? Gordian in March
+
 WHERE? Zoom (https://us02web.zoom.us/j/86565418494?pwd=gaWzreS9TgMW1sO7NCX1uFJlmilYMi.1) 
+
 WHEN? Wednesday March 5th, 10am-11.30am PT
 
 Our main topics will be:
