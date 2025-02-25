@@ -1,6 +1,6 @@
 # Gordian Developer Community
 
-![](images/logos/airgapped-wallet-community-v4-screen.jpg)
+![](images/logos/airgapped-wallet-community-v5-screen.jpg)
 
 <img src="images/logos/airgap.png" align="right">
 
